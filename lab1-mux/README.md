@@ -27,6 +27,8 @@ Vivado turns all circuits into the primitives of a CLB Slice: LUTs, muxes, carry
 
 SW[0] is x, SW[1] is y, SW[2] is the select line and LED[0] is the output m. SW[2] selects SW[0] or SW[1] and connects it to the LED. 
 
+#### **Questions**
+
 *In the rtl schematic screen shot, the two and gates are connected to select and not select. Describe what they are doing in terms of what a mux does.*
 
 *In the rtl schematic screen shot, what does the or gate do in terms of what a mux does?*
@@ -47,9 +49,117 @@ SW[0] is x, SW[1] is y, SW[2] is the select line and LED[0] is the output m. SW[
 
 
 
-## m16x4Mux
+## lab1_1_mux2-1-2bitwide
 
-#### Port Diagram
+#### Port Diagram![mux2-1-2bitwide](mux2-1-2bitwide.svg)
+
+
+
+#### Verilog Code
+
+![1548676409777](1548676409777.png)
+
+#### RTL Schematic Screen shot![1548677935411](1548677935411.png)
+
+#### Synthesis Schematic Screen shot![1548678008221](1548678008221.png)
+
+#### Implementation Device screen shot zoomed in on something interesting
+
+![1548678431621](1548678431621.png)
+
+#### Testing
+
+One select line now selects between two pair of inputs and displays one of the pairs on LEDs. 
+
+### Questions
+
+*Explain how to zoom in on the above Device Screen Shot.*
+
+*Do you see pictures of muxes in the Device Screen Shot? Are they used?*
+
+*Which stage of the work flow choose the specific LUT above?*
+
+*Which stage of the work flow chooses the green lines?*
+
+**What do the white lines represent?* 
+
+**What do the spots where white lines cross represent?*
+
+## lab1_2_mux2-1-tristate
+
+### Port Diagram![mux2-1-tristate](mux2-1-tristate.svg)
+
+#### Verilog Code![1548681368361](1548681368361.png)
+
+#### RTL Schematic Screen shot![1548681961810](1548681961810.png)
+
+
+
+#### Synthesis Schematic Screen shot
+
+![1548682159527](1548682159527.png)
+
+#### Implementation Device screen shot zoomed in on something interesting
+
+![1548682707595](1548682707595.png)
+
+#### Testing
+
+Two muxes are implemented using the same inputs with the same select line.  So if the two are equal, their outputs should be equal.  SW[0]- a , SW[1]-b,  SW[2]-select, outputs are the first two LEDs. 
+
+#### Questions
+
+*In the RTL schematic, what is RTL_Mux g1_i doing?*
+
+*Which of the two verilog implemented muxes actually created a tristate symbol in the RTL schematic?*
+
+*After Synthesis, which of the two verilog implemented muxes looks more simple?*
+
+*After Synthesis, why hasn't Vivado detected that the two circuits are identical?*
+
+*After implementation, does the schematic change? If so, put a screen shot here.*
+
+*Do the insides of the device reflect the schematic .. after implementation?*
+
+*What are the truth tables of the one or two LUT(s)? Put a screen shot(s) here.*
+
+*Are the truth tables the same or different? Why would Vivado do this? Is this a bug in Vivado?*
+
+*Can you make the one line of code mux into a 4 input, 2 select line, 1 output mux in one line?*
+
+*What are the minimum lines of code necessary to create a 4 input, 2 select line, 1 output mux?*
+
+## lab1_2_tb_mux2-1-2bitwide
+
+### Port Diagram
+
+#### Verilog Code
+
+#### Simulation Screen Shot![1548683422826](1548683422826.png)
+
+#### RTL Schematic Screen shot
+
+#### Synthesis Schematic Screen shot
+
+#### Implementation Device screen shot zoomed in on something interesting
+
+#### Testing
+
+#### Questions
+
+*In the simulation, what is the cause of the red box with an X in it above?* 
+
+*In the simulation, what do the green boxes with numbers in them mean?*
+
+*In the simulation, was all the activity captured or are their changes to the left of the yellow vertical line?*
+
+*Is this simulation associated with RTL, Synthesis or Implementation Vivado analysis?*
+
+*Is this a physics simulation or logic simulation?*
+
+## lab1_3_mux2-1-1bitwide-reg
+
+### Port Diagram
 
 #### Verilog Code
 
@@ -61,37 +171,9 @@ SW[0] is x, SW[1] is y, SW[2] is the select line and LED[0] is the output m. SW[
 
 #### Testing
 
-How is manually testing this circuit different?*
+## lab1_3_mux2-1-2bitwide-reg
 
-*Put a screen shot of the exploded design sources here:*
-
-*Put a screen shot of the exploded RTL schematic here:*
-
-*How many port diagrams are necessary for this project?*
-
-*How many modules are there?*
-
-*How many implemented or instantiated modules are there?*
-
-*In the RTL schematic, what is Vivado trying to communicate to us with the colors yellow and blue?*
-
-*How many lines of verilog code are there in this design?*
-
-*At what workflow stage (RTL, Synthesis, Implementation, Generate Bitstream) is the schematic started?*
-
-*At what workflow stage (RTL, Synthesis, Implementation, Generate Bitstream) is the schematic finished?*
-
-*What typically changes between the schematic start and finish?*
-
-*At what workflow stage (RTL, Synthesis, Implementation, Generate Bitstream) is the device or FPGA usage diagram started?*
-
-*At what workflow stage (RTL, Synthesis, Implementation, Generate Bitstream) is the device or FPGA usage diagram finished?*
-
-*At what workflow stage (RTL, Synthesis, Implementation, Generate Bitstream) is the XDC file last checked?*
-
-## m16x4MuxRTL
-
-#### Port Diagram
+### Port Diagram
 
 #### Verilog Code
 
@@ -103,60 +185,45 @@ How is manually testing this circuit different?*
 
 #### Testing
 
-*Go through each line of the code and comment on it .. explain the variables .. explain what is happening. Paste the commented verilog code here.*  
+## lab1_4_2-mux2-1inSequence
 
-*This is the first program to use registers. Why are registers needed?* 
+### Port Diagram
 
-*What drives [15:8] LED?*
+#### Verilog Code
 
-*MuxInput gets information from where?*
+#### RTL Schematic Screen shot
 
-*Why is enter necessary?*
+#### Synthesis Schematic Screen shot
 
-*What is the difference between initial and reset?*
+#### Implementation Device screen shot zoomed in on something interesting
 
-*Why is initial and reset necessary for muxInput, but not LED?*
+#### Testing
 
-*How many lines of verilog code were necessary to create the 16x4 mux?*
+## lab1_4_bcdTo7Segment-dataflow
 
-*How many lines of verilog code were necessary to manually test the 16x4 mux with the nexys4ddr board?*
+### Port Diagram
 
-*How many verilog modules were used in this Vivado project?*
+#### Verilog Code
 
-*Where is the original documentation for this command that creates muxes?* 
-Exhaust 10 minutes trying to find it. List off the keywords you used to search for an explanation and URL's that you find that are closer than these:
+#### RTL Schematic Screen shot
 
-This presentation from [Standford](https://web.stanford.edu/class/archive/ee/ee371/ee371.1066/tools/verilog_tips.pdf) talks about how to build arrays of wires but not this command.  This is a lab from [University of Maryland College Park](https://ece.umd.edu/class/enee245.S2015/Lab7.pdf) very similar to this lab, but doesn't mention this technique.  This is a [link](http://electrosofts.com/verilog/mux.html) that inspired the instructor to start playing around with this command.  [Cliff Cummings](http://www.sunburst-design.com/papers/)  is an engineer that has been at the forefront of driving Verilog and System Verilog evolution.
+#### Synthesis Schematic Screen shot
+
+#### Implementation Device screen shot zoomed in on something interesting
+
+#### Testing
+
+## 
 
 ## Ethics
 
-The ethics questions below are more important than your answers. The goal in answering them is to remember the question. So the best answers are a non-trivial, thoughtful, relevant hypothesis. 
+Why are there all these different ways of implementing a mux in verilog when vivado turns them all into the same thing .. a LUT? 
 
-#### Ethics of Change
+If the one good, true way of implementing a mux in verilog, why not just teach/learn that?
 
-The simplicity of the RTL versions of the mux command raises the question of what is possible with the assign command? Where is the manual that goes over all this? Where can we discover what is possible? The problem is that there are many manuals with complete backwards compatibility to the dawn of verilog history in the 1980's.  These are the official Verilog standards.  They are all supersets .. meaning some vendors (Vivado) **don't** implement everything. 
+Why would Vivado not recognize two identical circuits implemented with different verilog code?
 
-​	IEEE 1364-1995 (Verilog 1995)  
-​	IEEE  1364-2001 (Verilog 2001)   
-​	IEEE  1364-2005 (Verilog 2005)  
-​	IEEE  1800-2005 (SystemVerilog)  
-​	IEEE  1800-2009 (SystemVerilog)  
-​	IEEE  1800-2012 (SystemVerilog)   
-​	IEEE  1364-2014 ([Verilog-AMS 2.4](http://www.accellera.org/downloads/standards/v-ams))    
 
-It is impossible to test thousands inputs combinations and state transitions by hand. This problem coupled with the chaos of Verilog subsets of a superset make searching the internet for verilog solutions problematic. The reasons for this chaos involve testing.  This is discussed below. But first we must look at the ethics of change. 
-
-Engineers are professionals like doctors and lawyers. They are by law allowed, protected and encouraged to experiment/improve at every opportunity. Engineers make new versions. Doctors improve treatment and surgery techniques.  Lawyers find new ways to interpret laws and dream up new ones. This constant change creates a chaos. 
-
-Technicians, nurses and paralegals & judges are the anchors, the experts, the people that build walls around this change. They extract from the chaos what works, complain about what doesn't and become the conservative force that captures what is good for society. **In the process technicians, nurses and paralegals become experts.**  Engineers, doctors and lawyers are merely artists. There is lots of research showing that once the human species captures some knowledge, it never forgets .. even if the number of individuals knowing a very small piece of it becomes much smaller than during the technology's growth period. 
-
-This part of society works. But there is a down side. A barrier, a Catch22 starts growing for those trying to become Engineers or Technicians, Doctors or Nurses. Specialization, complexity, pre-requisite knowledge starts growing. A new generation has trouble getting a job. They ask "How can I get the experience the job says I need without getting the job?" An old generation creates a bubble around themselves. The younger generation sees this as a barrier to entry. The older generation retires. Society in general get's scared.  Standing still, repeating success is a disaster for any organization. 
-
-*So how does a younger generation pop a generation bubble or climb over the experience barrier and get a job?*
-
-*What does the younger generation have to do on their resume and while in college ... when the complexity, the accumulated knowledge, the expertise, the experience required seems impossible to accumulate?*
-
-*How does a young generation serve the world, the human species popping this generational bubble?*
 
 
 
