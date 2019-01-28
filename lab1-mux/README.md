@@ -13,27 +13,35 @@ Vivado turns all circuits into the primitives of a CLB Slice: LUTs, muxes, carry
 
 #### RTL Schematic Screen shot
 
+![1548635698002](1548635698002.png)
+
 #### Synthesis Schematic Screen shot
+
+![1548636011733](1548636011733.png)
 
 #### Implementation Device screen shot zoomed in on something interesting
 
+![1548638722261](1548638722261.png)
+
 #### Testing
 
-This mux is implemented both with gates, tristate and RTL. 
+SW[0] is x, SW[1] is y, SW[2] is the select line and LED[0] is the output m. SW[2] selects SW[0] or SW[1] and connects it to the LED. 
 
-*What are the differences between the three at after RTL Analysis?* 
+*In the rtl schematic screen shot, the two and gates are connected to select and not select. Describe what they are doing in terms of what a mux does.*
 
-*What are the differences between the three when implemented in the FPGA?*
+*In the rtl schematic screen shot, what does the or gate do in terms of what a mux does?*
 
-*What are the differences after synthesis in the schematic?*
+*How does the schematic change after running synthesis?*
 
-*What happened in the Device implementation to these three? are they all the same or different?*
+*After running synthesis and implementation, clicking on synthesis under RTL, synthesis and Implementation continues to display the LUT based diagram. Not the gate based diagram. Why? Form a reasonable, non-trivial, relevant hypothesis.* 
 
-*Is the RTL implementation in your opinion too cryptic?* 
+ *The black and white design window appears first after running which step of the workflow?*
 
-*Harmonize the ? : with the description of these assign conditional symbols in this  [ut](https://www.utdallas.edu/~akshay.sridharan/index_files/Page5212.htm) manual.* 
+*How what can you click on to see a region of the device window change from some color to white?*
 
-*Can you leverage any of these to make a m4x2 mux? Describe what you tried here before looking at the m4x2 mux project.* 
+*White arrows in the screen shot above are helping us see what?* 
+
+
 
 ## m16x4Mux
 
