@@ -41,6 +41,10 @@ SW[0] is x, SW[1] is y, SW[2] is the select line and LED[0] is the output m. SW[
 
 *White arrows in the screen shot above are helping us see what?* 
 
+*How does Data flow in the fpga from left to right, right to left, bottom up, top down?*
+
+*What is the verilog symbol for the white line going up at an angle in the device diagram?*
+
 
 
 ## m16x4Mux
