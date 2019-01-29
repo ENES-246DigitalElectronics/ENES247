@@ -29,9 +29,9 @@ SW[0] is x, SW[1] is y, SW[2] is the select line and LED[0] is the output m. SW[
 
 #### **Questions**
 
-*In the rtl schematic screen shot, the two and gates are connected to select and not select. Describe what they are doing in terms of what a mux does.*
+*In the rtl schematic screen shot, the two **and gates** are connected to select and not select. Describe what they are doing in terms of what a mux does.*
 
-*In the rtl schematic screen shot, what does the or gate do in terms of what a mux does?*
+*In the rtl schematic screen shot, what does the **or gate** do in terms of what a mux does?*
 
 *How does the schematic change after running synthesis?*
 
@@ -125,9 +125,7 @@ Two muxes are implemented using the same inputs with the same select line.  So i
 
 *Are the truth tables the same or different? Why would Vivado do this? Is this a bug in Vivado?*
 
-*Can you make the one line of code mux into a 4 input, 2 select line, 1 output mux in one line?*
-
-*What are the minimum lines of code necessary to create a 4 input, 2 select line, 1 output mux?*
+*Do some tests modifying this project. Can you make the one line of code mux into a 4 input, 2 select line, 1 output mux in one line?*
 
 ## lab1_2_tb_mux2-1-2bitwide
 
