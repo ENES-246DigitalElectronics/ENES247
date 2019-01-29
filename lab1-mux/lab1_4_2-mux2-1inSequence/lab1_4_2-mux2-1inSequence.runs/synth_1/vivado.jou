@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Jan 29 15:21:02 2019
+# Process ID: 1220
+# Current directory: C:/Users/FoersterGame/Documents/GitHub/ENES247/lab1-mux/lab1_4_2-mux2-1inSequence/lab1_4_2-mux2-1inSequence.runs/synth_1
+# Command line: vivado.exe -log mux_3_to_1_instantiation.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mux_3_to_1_instantiation.tcl
+# Log file: C:/Users/FoersterGame/Documents/GitHub/ENES247/lab1-mux/lab1_4_2-mux2-1inSequence/lab1_4_2-mux2-1inSequence.runs/synth_1/mux_3_to_1_instantiation.vds
+# Journal file: C:/Users/FoersterGame/Documents/GitHub/ENES247/lab1-mux/lab1_4_2-mux2-1inSequence/lab1_4_2-mux2-1inSequence.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source mux_3_to_1_instantiation.tcl -notrace

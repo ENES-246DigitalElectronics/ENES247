@@ -1,4 +1,6 @@
 # Mux
+[Inspiration for this lab](https://www.xilinx.com/support/documentation/university/Vivado-Teaching/HDL-Design/2015x/Verilog/docs-pdf/lab1.pdf)
+
 Vivado turns all circuits into the primitives of a CLB Slice: LUTs, muxes, carry-logic, xor gates, d flip flops. Understanding these is the goal of this course. We have covered XOR gates and LUTs. The goal now is to cover muxes. 
 
 ## 1_1_m2x1Mux-1bitwide
@@ -27,7 +29,7 @@ Vivado turns all circuits into the primitives of a CLB Slice: LUTs, muxes, carry
 
 SW[0] is x, SW[1] is y, SW[2] is the select line and LED[0] is the output m. SW[2] selects SW[0] or SW[1] and connects it to the LED. 
 
-#### **Questions**
+#### **Questions**/Tasks
 
 *In the rtl schematic screen shot, the two **and gates** are connected to select and not select. Describe what they are doing in terms of what a mux does.*
 
@@ -71,7 +73,7 @@ SW[0] is x, SW[1] is y, SW[2] is the select line and LED[0] is the output m. SW[
 
 One select line now selects between two pair of inputs and displays one of the pairs on LEDs. 
 
-### Questions
+#### Questions/Tasks
 
 *Explain how to zoom in on the above Device Screen Shot.*
 
@@ -107,7 +109,7 @@ One select line now selects between two pair of inputs and displays one of the p
 
 Two muxes are implemented using the same inputs with the same select line.  So if the two are equal, their outputs should be equal.  SW[0]- a , SW[1]-b,  SW[2]-select, outputs are the first two LEDs. 
 
-#### Questions
+#### Questions/Tasks
 
 *In the RTL schematic, what is RTL_Mux g1_i doing?*
 
@@ -149,7 +151,7 @@ The screen shots and port diagrams above are not going to be done for you. For t
 
 #### Testing
 
-#### Questions
+#### Questions/Tasks
 
 *tb stands for what?*
 
@@ -270,7 +272,7 @@ Now answer these questions:
 
 #### Testing
 
-#### Questions
+#### Questions/Tasks
 
 *This circuit is similar to which previous circuit?*
 
@@ -322,7 +324,7 @@ The simple mux circuits explored in this lab were created with various forms of 
 
 #### Testing
 
-#### Questions
+#### Questions/Tasks
 
 *How is this code different from the previous project?*
 
@@ -347,9 +349,11 @@ In the Implementation Device screen, there are pictures of a mux. *Why does viva
 
 ## lab1_4_2-mux2-1inSequence
 
+One of the ways we know what is going on is to predict Vivado's behavior. This circuit uses two select lines, but only selects between 3 inputs. Normally two select lines chooses between four inputs. So this is not quite a mux. 
+
 ### Port Diagram
 
-#### Verilog Code
+#### Verilog Code![1548792158919](1548792158919.png)
 
 #### RTL Schematic Screen shot
 
@@ -359,9 +363,45 @@ In the Implementation Device screen, there are pictures of a mux. *Why does viva
 
 #### Testing
 
-#### 
+#### Questions/Tasks
+
+*Which of the two modules above is the top level module?*
+
+*What is the symbol for top level module in the vivado design sources hierarchy?*
+
+*Which of the two modules above has nets (wires) mentioned in the XDC file?*
+
+What are the lower level module instantiation names? 
+
+*What in the XDC file is the wire ul_o connected to?*
+
+Do an experiment.  Change the .x, .y, .z and .m order in the instantiation. *Does the code still produce the same RTL schematic?*
+
+Do another experiment. Remove .x, .y, .s and .m along with the parentheses () in the module instantiation, **but keep the original order that matches the instantiated module**.  *Does this code still produce the same RTL schematic?*
+
+Think about a big project. You start off writing the smaller modules and testing. Then you write larger and larger modules. The larger modules call the smaller modules. Two very different larger modules may re-use the same smaller module.  Port Interface drawings keep track of the net names, but not the order defined in the lower module. Mapping higher module net names to lower module net names means having to know what order they were originally in .. in the lower module.  *Which of the above net mapping techniques between modules makes it only necessary to map wire names, not order?*
+
+*Does the RTL schematic show the two instantiated modules?* 
+
+*What does the Plus sign mean?*
+
+How does the synthesized schematic change? 
+
+*How many LUTs does the synthesized schematic indicate will be used?*
+
+*After implementation, does the schematic change?*
+
+The LUT has 5 inputs and a truth table of all their possible combinations.  *Where is this truth table in the Vivado interface (hint: netlist)?*
+
+*Take a screenshot of the truth table and put it here.*
+
+*Find where I4, I3, .. I0 are mapped to the top level input nets. Put the screen shot here.*
+
+*Is there any order to the mapping?*
 
 
+
+ 
 
 ## Ethics
 
