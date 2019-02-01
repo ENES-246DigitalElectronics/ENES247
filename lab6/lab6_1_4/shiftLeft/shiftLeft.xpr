@@ -3,14 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<<<<<<< HEAD
-<Project Version="7" Minor="39" Path="C:/Users/Scott Foerster/Documents/GitHub/ENES247/lab1-mux/lab1_2_tb_mux2-1-2bitwide/lab1_2_tb_mux2-1-2bitwide.xpr">
-=======
-<Project Version="7" Minor="39" Path="C:/Users/SET253-INS1U/Documents/GitHub/ENES247/lab1-mux/lab1_2_tb_mux2-1-2bitwide/lab1_2_tb_mux2-1-2bitwide.xpr">
->>>>>>> a273eaa3b95653444343d123df97202981112e58
+<Project Version="7" Minor="39" Path="C:/Users/Scott Foerster/Documents/GitHub/ENES247/lab6/lab6_1_4/shiftLeft/shiftLeft.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="422694b736a745ec90a02c04c5c6b441"/>
+    <Option Name="Id" Val="bc34eb69c3a446e49b5c62a179d56893"/>
     <Option Name="Part" Val="xc7a100tcsg324-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -66,23 +62,8 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sources_1/imports/lab6_1_4/Parallel_in_serial_out_load_enable_behavior.v">
         <FileInfo>
-<<<<<<< HEAD
-          <Attr Name="ImportPath" Val="$PPRDIR/../../lab6/lab6_1_4/Parallel_in_serial_out_load_enable_behavior.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Parallel_in_serial_out_load_enable_behavior.v"/>
           <Attr Name="ImportTime" Val="1548688965"/>
-=======
-          <Attr Name="ImportPath" Val="$PPRDIR/mux_2bit_2_to_1_dataflow.v"/>
-          <Attr Name="ImportTime" Val="1548632292"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/lab1_2_tb_mux2-1-2bitwide/mux_2bit_2_to_1_dataflow_tb.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/mux_2bit_2_to_1_dataflow_tb.v"/>
-          <Attr Name="ImportTime" Val="1548632292"/>
->>>>>>> a273eaa3b95653444343d123df97202981112e58
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -90,20 +71,16 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-<<<<<<< HEAD
         <Option Name="TopModule" Val="Parallel_in_serial_out_load_enable_behavior"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
-=======
-        <Option Name="TopModule" Val="mux_2bit_2_to_1_dataflow"/>
->>>>>>> a273eaa3b95653444343d123df97202981112e58
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
       <Filter Type="Constrs"/>
-      <File Path="$PSRCDIR/constrs_1/imports/lab1_2_tb_mux2-1-2bitwide/Nexys4DDR_Master.xdc">
+      <File Path="$PSRCDIR/constrs_1/imports/lab6_1_4/Nexys4DDR_Master.xdc">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/Nexys4DDR_Master.xdc"/>
-          <Attr Name="ImportTime" Val="1548632292"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Nexys4DDR_Master.xdc"/>
+          <Attr Name="ImportTime" Val="1548688965"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
@@ -113,19 +90,15 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
-      <Filter Type="Srcs"/>
-<<<<<<< HEAD
       <File Path="$PSRCDIR/sim_1/imports/lab6_1_4/Parallel_in_serial_out_load_enable_behavior_tb.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../lab6/lab6_1_4/Parallel_in_serial_out_load_enable_behavior_tb.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Parallel_in_serial_out_load_enable_behavior_tb.v"/>
           <Attr Name="ImportTime" Val="1548688965"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-=======
->>>>>>> a273eaa3b95653444343d123df97202981112e58
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="Parallel_in_serial_out_load_enable_behavior_tb"/>
@@ -162,17 +135,22 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="10">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" IncludeInArchive="true">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -183,6 +161,7 @@
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
