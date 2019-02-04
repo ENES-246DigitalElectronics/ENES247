@@ -110,3 +110,5 @@ dismissDialog("Open Project"); // bx (cp)
 // Tcl Message: update_compile_order -fileset sources_1 
 expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hexTo7seg (hexTo7seg.v)]", 1); // B (D, cp)
 collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, hexTo7seg (hexTo7seg.v)]", 1); // B (D, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 789 MB. GUI used memory: 51 MB. Current time: 2/4/19, 4:20:13 PM EST
+// HMemoryUtils.trashcanNow. Engine heap size: 789 MB. GUI used memory: 46 MB. Current time: 2/4/19, 4:50:13 PM EST
