@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Feb  3 15:13:27 2019
+# Process ID: 6032
+# Current directory: C:/Users/FoersterGame/Documents/GitHub/ENES247/lab2-7segDisplayofAdders/Lab2_0Constants/Lab2_0Constants.runs/synth_1
+# Command line: vivado.exe -log bcdto7segment_dataflow.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bcdto7segment_dataflow.tcl
+# Log file: C:/Users/FoersterGame/Documents/GitHub/ENES247/lab2-7segDisplayofAdders/Lab2_0Constants/Lab2_0Constants.runs/synth_1/bcdto7segment_dataflow.vds
+# Journal file: C:/Users/FoersterGame/Documents/GitHub/ENES247/lab2-7segDisplayofAdders/Lab2_0Constants/Lab2_0Constants.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source bcdto7segment_dataflow.tcl -notrace
