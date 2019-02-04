@@ -3,7 +3,7 @@
 // Module Name: bcdto7segment_dataflow
 /////////////////////////////////////////////////////////////////
 
-module bcdto7segment_dataflow(
+module BCDto7segment(
     input [3:0] x,
     output [6:0] seg
     );
