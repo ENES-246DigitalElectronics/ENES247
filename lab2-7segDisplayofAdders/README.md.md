@@ -76,10 +76,6 @@ wire [4:0] 5'O37 			11111
 reg [3:0] 4'B1x_01 		1x01   the underscore _ is considered white space here
 wire [11:0] 7'Hx 		 	 xxxxxxx 
 
-Vivado does support the signed (MSB bit used as positive or negative) Verilog math golden rule:  [All operands must be signed](http://billauer.co.il/blog/2012/10/signed-arithmetics-verilog/). 
-
-Vivado does not support signed constants that are defined in Verilog (using the MSB to keep track of positive and negative). 
-
 Your goal is to develop a circuit with four BCD bits coming in and 7 bits leaving to support a 7 segment display.
 
 ![1549030304451](1549030304451.png)
@@ -196,9 +192,9 @@ The goal is to display BCD with an LED representing 1, the switches representing
 
 #### Port Interface![hex2sevenSegDisplay](hex2sevenSegDisplay.svg)
 
-#### Verilog Code
+#### Verilog Code![1549309140924](1549309140924.png)
 
-#### RTL Schematic
+#### RTL Schematic![1549309176377](1549309176377.png)
 
 #### Synthesis Schematic
 

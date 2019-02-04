@@ -1,20 +1,9 @@
-module hex2bcd(
-    input [3:0] hex, // four bits hex input
-    output reg [3:0] bcd, // four bits BCD output
-	output reg carry // carry over to more significant bits 
-    );
-    always @* begin
-        if (hex>4'b1001) begin  //greater than 9
-            carry=1; 
-            bcd[3:0]=hex-10;
-            end 
-        else
-            bcd=hex;
-			carry=0;
-    end
-endmodule
+`timescale 1ns / 1ps
+/////////////////////////////////////////////////////////////////
+// Module Name: bcdto7segment_dataflow
+/////////////////////////////////////////////////////////////////
 
-module bcdto7segment(
+module bcdto7segment_dataflow(
     input [3:0] x,
     output [6:0] seg
     );
