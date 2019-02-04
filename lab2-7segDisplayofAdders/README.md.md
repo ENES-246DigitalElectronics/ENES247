@@ -46,7 +46,7 @@ This lab is about turning off and on the individual red LED segments of the disp
 
 *Are these the same number of additional wires that would be needed coming out of the FPGA?*
 
-## lab2-7segDisplayofAdders
+## lab2_1_bcdTo7Segment
 
 Constants are typically easy in other languages. In circuit design, constants are used too often. A constant can have four values:
 
@@ -134,7 +134,7 @@ Do these one's created for segment "g" of the display turn the g red LED off or 
 
 If the circuit receives a hex B, what is going to be displayed on the seven seg display designed for BCD?
 
-## Lab2_2_
+## Lab2_2_hexToBCD
 
 #### Port Interface
 
@@ -148,7 +148,47 @@ If the circuit receives a hex B, what is going to be displayed on the seven seg 
 
 #### Prompts
 
+## Lab2_3_hexTo7seg
 
+#### Port Interface
+
+#### RTL Schematic
+
+#### Synthesis Schematic
+
+#### Implementation Design Screen shot of something interesting
+
+#### Testing
+
+#### Prompts
+
+## Lab2_4_Adders
+
+#### Port Interface
+
+#### RTL Schematic
+
+#### Synthesis Schematic
+
+#### Implementation Design Screen shot of something interesting
+
+#### Testing
+
+#### Prompts
+
+## Lab2_5_FastCarryLogic
+
+#### Port Interface
+
+#### RTL Schematic
+
+#### Synthesis Schematic
+
+#### Implementation Design Screen shot of something interesting
+
+#### Testing
+
+#### Prompts
 
 ## excetra
 
