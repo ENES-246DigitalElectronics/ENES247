@@ -1,0 +1,73 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Feb  4 12:10:16 2019
+# Process ID: 8716
+# Current directory: C:/Users/Scott Foerster/Documents/GitHub/ENES247/lab2-7segDisplayofAdders/Lab2_1_bcdTo7segment
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8016 C:\Users\Scott Foerster\Documents\GitHub\ENES247\lab2-7segDisplayofAdders\Lab2_1_bcdTo7segment\Lab2_1bcdTo7segmentDisplay.xpr
+# Log file: C:/Users/Scott Foerster/Documents/GitHub/ENES247/lab2-7segDisplayofAdders/Lab2_1_bcdTo7segment/vivado.log
+# Journal file: C:/Users/Scott Foerster/Documents/GitHub/ENES247/lab2-7segDisplayofAdders/Lab2_1_bcdTo7segment\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Scott Foerster/Documents/GitHub/ENES247/lab2-7segDisplayofAdders/Lab2_1_bcdTo7segment/Lab2_1bcdTo7segmentDisplay.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/Scott Foerster/Documents/GitHub/ENES247/lab2-7segDisplayofAdders/Lab2_1_bcdTo7segment'
+INFO: [Project 1-313] Project file moved from 'C:/Users/FoersterGame/Documents/GitHub/ENES247/lab2-7segDisplayofAdders/Lab2_1bcdTo7segmentDisplay' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'C:/Users/Scott Foerster/Documents/GitHub/ENES247/lab2-7segDisplayofAdders/Lab2_1_bcdTo7segment/Lab2_1bcdTo7segmentDisplay.ip_user_files', nor could it be found using path 'C:/Users/FoersterGame/Documents/GitHub/ENES247/lab2-7segDisplayofAdders/Lab2_1bcdTo7segmentDisplay/Lab2_1bcdTo7segmentDisplay.ip_user_files'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: bcdto7segment_dataflow
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 985.902 ; gain = 96.926
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bcdto7segment_dataflow' [C:/Users/Scott Foerster/Documents/GitHub/ENES247/lab2-7segDisplayofAdders/Lab2_1_bcdTo7segment/Lab2_1bcdTo7segmentDisplay.srcs/sources_1/imports/Lab2_0Constants/bcdto7segment_dataflow_Nexys4ddr.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'bcdto7segment_dataflow' (1#1) [C:/Users/Scott Foerster/Documents/GitHub/ENES247/lab2-7segDisplayofAdders/Lab2_1_bcdTo7segment/Lab2_1bcdTo7segmentDisplay.srcs/sources_1/imports/Lab2_0Constants/bcdto7segment_dataflow_Nexys4ddr.v:6]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1018.547 ; gain = 129.570
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1018.547 ; gain = 129.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1018.547 ; gain = 129.570
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Scott Foerster/Documents/GitHub/ENES247/lab2-7segDisplayofAdders/Lab2_1_bcdTo7segment/Lab2_1bcdTo7segmentDisplay.srcs/constrs_1/imports/Lab2_0Constants/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [C:/Users/Scott Foerster/Documents/GitHub/ENES247/lab2-7segDisplayofAdders/Lab2_1_bcdTo7segment/Lab2_1bcdTo7segmentDisplay.srcs/constrs_1/imports/Lab2_0Constants/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1171.633 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 1198.000 ; gain = 309.023
+6 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 1198.000 ; gain = 309.023
+close_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Feb  4 13:54:25 2019...

@@ -96,7 +96,7 @@ This circuit has nothing to do with choosing which of the 8 segments are being u
 
 The obvious solution in verilog:
 
-![1549031314789](1549031314789.png)
+![1549306426198](1549306426198.png)
 
 There is some logic behind this code. Look at the equation for seg(6) or g. Only three numbers turn off  segment g: **0, 1 or 7**,  **0001 or 0111**, (**~x[3] & ~x[2] & ~x[1]** ) |(**x[2] & x[1] & x[0]** ). 
 
@@ -104,7 +104,7 @@ Is this obvious to a electrical or computer engineer working in the field?  **Ye
 
 #### RTL Schematic
 
-![1549224888174](1549224888174.png)
+![1549306371095](1549306371095.png)
 
 #### Synthesis Schematic
 
@@ -114,45 +114,87 @@ Is this obvious to a electrical or computer engineer working in the field?  **Ye
 
 #### Prompts
 
-Was the <u>obvious solution</u> obvious to you? 
+*Was the <u>obvious solution</u> obvious to you?* 
 
-Did you see a verilog coding solution that was different than this one before looking at the code?
+*Did you see a verilog coding solution that was different than this one before looking at the code?*
 
-Did you understand the verilog code's logic above after reading it? 
+*Did you understand the verilog code's logic above after reading it?* 
 
-Do these solutions blind you .. prevent you from seeing other solutions than the one above? 
+*Do these solutions blind you .. prevent you from seeing other solutions than the one above?* 
 
-BCD is easy compared to displaying in addition to 0,1,2,3,4,5,6,7,8,9 also displaying abcdEF of hex. Suppose you did this project to support hex also. Is this [scope creep](https://en.wikipedia.org/wiki/Scope_creep)? 
+*BCD is easy compared to displaying in addition to 0,1,2,3,4,5,6,7,8,9 also displaying abcdEF of hex. Suppose you added support for hex in this project. Is this [scope creep](https://en.wikipedia.org/wiki/Scope_creep)?* 
 
-What is normal? For an engineer to create/see a complicated solution, and revisit the project requirements to see if the project is out of scope? Or design a minimal, elegant solution that perfectly matches the design requirements the first time? 
+*What is normal? For an engineer to create/see a complicated solution, and revisit the project requirements to see if the project is out of scope? Or design a minimal, elegant solution that perfectly matches the design requirements the first time?* 
 
-For seg[6] "g" , the first term is  (**~x[3] & ~x[2] & ~x[1]** ).  What BCD symbols (0,1,2,3,4,5,6,7,8,9)  is it creating a 1 for? 
+*For seg[6] "g" , the first term is  (**~x[3] & ~x[2] & ~x[1]** ).  What BCD symbols (0,1,2,3,4,5,6,7,8,9)  is it creating a 1 for?* 
 
-For seg[6] "g" , the second term is  (**x[2] & x[1] & x[0]** ).  What BCD symbols (0,1,2,3,4,5,6,7,8,9)  is it creating a 1 for? 
+*For seg[6] "g" , the second term is  (**x[2] & x[1] & x[0]** ).  What BCD symbols (0,1,2,3,4,5,6,7,8,9)  is it creating a 1 for?* 
 
-Do these one's created for segment "g" of the display turn the g red LED off or on?
+*Do these one's created for segment "g" of the display turn the g red LED off or on?*
 
-If the circuit receives a hex B, what is going to be displayed on the seven seg display designed for BCD?
+*If the circuit receives a hex B, what is going to be displayed on the seven seg display designed for BCD?*
+
+*Find an alternative to this project and link it up here.* 
+
+*Is this project more beautiful, easier to understand, less work to figure out what is going on in the first place?* 
 
 ## Lab2_2_hexToBCD
 
 #### Port Interface
 
+![HexToBCD](HexToBCD.svg)
+
 #### Verilog Code
+
+![1549295889139](1549295889139.png)
 
 #### RTL Schematic
 
+![1549296183721](1549296183721.png)
+
 #### Synthesis Schematic
 
+![1549296365537](1549296365537.png)
+
 #### Implementation Design Screen shot of something interesting
+
+![1549296499276](1549296499276.png)
+
+![1549296638682](1549296638682.png)
 
 #### Testing
 
 #### Prompts
+
+*The always @\* means execute when anything on the right hand side of the equal signs changes. What is the only thing on the right hand side of the equal sign?*
+
+*Within the module the lines of code all execute in parallel. Within the always begin .. end block, everything executes in sequence like a normal program. There are two more begin end blocks associated with if and else. What would a line of code look like if there was no begin end block after always, after if or after else?*
+
+This project was solved by a Xilinx instructor with the following four modules:
+
+![1549297133584](1549297133584.png)
+
+![1549297195247](1549297247694.png)
+
+![1549297195247](1549297195247.png)
+
+![1549297451207](1549297451207.png)
+
+*Why would someone write code like this, when the verilog code in the project is possible?*
+
+*There are other clues that this code is not RTL besides the heavy use of modules. What is it?*
+
+*The RTL schematic is very interesting. It has a symbol for comparing and a symbol for subtracting. A normal gate is not used. What are the equivalent symbols in logisim? (Attach screen shots)*
+
+*Are there any standard symbols for comparing and adding circuits on the internet? Spend 1 minute, link up what you can find or write nothing.* 
+
+*Spend 1 minute reading this [link](https://blog.digilentinc.com/fpga-configurable-logic-block/) with the goal of figuring out the difference between a SliceL and LUT.* *Write a phrase to describe how you are going to remember the difference .. for now.* 
 
 ## Lab2_3_hexTo7seg
 
-#### Port Interface
+The goal is to display BCD with an LED representing 1, the switches representing the original Hex, the LED representing 1 and the rest of the BCD number appearing on the 7 segment display.
+
+#### Port Interface![hex2sevenSegDisplay](hex2sevenSegDisplay.svg)
 
 #### Verilog Code
 
@@ -165,6 +207,14 @@ If the circuit receives a hex B, what is going to be displayed on the seven seg 
 #### Testing
 
 #### Prompts
+
+Why the modules HexToBCD and BCDto7SegDisplay? Why not make it just one big, simple verilog project?
+
+Does the port interface for Hex to 7 Segment Display have to contain the two modules?
+
+
+
+
 
 ## Lab2_4_Adders
 
@@ -203,6 +253,8 @@ The goal here is to implement some primitive fast carry logic and see if Vivado 
 #### Testing
 
 #### Prompts
+
+
 
 ## excetra
 

@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Feb  4 12:10:16 2019
+# Process ID: 8716
+# Current directory: C:/Users/Scott Foerster/Documents/GitHub/ENES247/lab2-7segDisplayofAdders/Lab2_1_bcdTo7segment
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8016 C:\Users\Scott Foerster\Documents\GitHub\ENES247\lab2-7segDisplayofAdders\Lab2_1_bcdTo7segment\Lab2_1bcdTo7segmentDisplay.xpr
+# Log file: C:/Users/Scott Foerster/Documents/GitHub/ENES247/lab2-7segDisplayofAdders/Lab2_1_bcdTo7segment/vivado.log
+# Journal file: C:/Users/Scott Foerster/Documents/GitHub/ENES247/lab2-7segDisplayofAdders/Lab2_1_bcdTo7segment\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/Scott Foerster/Documents/GitHub/ENES247/lab2-7segDisplayofAdders/Lab2_1_bcdTo7segment/Lab2_1bcdTo7segmentDisplay.xpr}
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+close_project
