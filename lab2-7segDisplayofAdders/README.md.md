@@ -138,6 +138,8 @@ If the circuit receives a hex B, what is going to be displayed on the seven seg 
 
 #### Port Interface
 
+#### Verilog Code
+
 #### RTL Schematic
 
 #### Synthesis Schematic
@@ -151,6 +153,8 @@ If the circuit receives a hex B, what is going to be displayed on the seven seg 
 ## Lab2_3_hexTo7seg
 
 #### Port Interface
+
+#### Verilog Code
 
 #### RTL Schematic
 
@@ -178,7 +182,17 @@ If the circuit receives a hex B, what is going to be displayed on the seven seg 
 
 ## Lab2_5_FastCarryLogic
 
+the goal of adders is to add fast .. all programs count .. increment. Multiply is many adds inside a computer. Divide is many subtracts.  Speeding up any mathematical operation means speeding up adding. .
+
+Adding, multiplying means learning how to Carry. The carry is what slows down adding.  This [paper](file:///C:/Users/FoersterGame/Downloads/adder_32b_clocked1.pdf) summaries research into fast Carry Logic as of 2017.  Part of the Xilinx FPGA is dedicated to implementing some form of fast carry logic.  
+
+![1548790399124](1548790399124.png)
+
+The goal here is to implement some primitive fast carry logic and see if Vivado sees this attempt and changes the Adder of Lab 2-4. 
+
 #### Port Interface
+
+#### Verilog Code
 
 #### RTL Schematic
 

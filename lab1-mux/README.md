@@ -341,7 +341,7 @@ Answer the previous question from the big picture point of view, not from the (i
 
 In the Implementation Device screen, there are pictures of a mux. *Why does vivado implement **if else** in a LUT when it has muxes in the configuration logic blocks (CLB)?* 
 
-[Fast Carry Logic](https://www.xilinx.com/support/documentation/user_guides/ug474_7Series_CLB.pdf) speeds up any math the FPGA does. On page 42 there is this diagram: ![1548790399124](1548790399124.png)
+[Fast Carry Logic](https://www.xilinx.com/support/documentation/user_guides/ug474_7Series_CLB.pdf) speeds up any math the FPGA does. More on this in Lab 2. But this is one reason why muxes exist in the CLB. On page 42 there is this diagram: ![1548790399124](1548790399124.png)
 
 *When does vivado implement the CLB muxes?*
 
