@@ -90,7 +90,7 @@ CA, CB, CC, CD, CE, CF, CG and DP (decimal place), are all wired in parallel to 
 
 This circuit has nothing to do with choosing which of the 8 segments are being used. Another circuit is going to have to do that. But we need to turn them off in order to test this circuit. 
 
-The obvious solution in verilog:
+The obvious solution in verilog doesn't use constants:
 
 ![1549306426198](1549306426198.png)
 
@@ -109,6 +109,8 @@ Is this obvious to a electrical or computer engineer working in the field?  **Ye
 #### Testing
 
 #### Prompts
+
+*Does the verilog code above use constants?* 
 
 *Was the <u>obvious solution</u> obvious to you?* 
 
@@ -130,9 +132,11 @@ Is this obvious to a electrical or computer engineer working in the field?  **Ye
 
 *If the circuit receives a hex B, what is going to be displayed on the seven seg display designed for BCD?*
 
-*Find an alternative to this project and link it up here.* 
+*Find an alternative verilog solution to this project and link it up here.* 
 
 *Is this project more beautiful, easier to understand, less work to figure out what is going on in the first place?* 
+
+*Does the project you linked up use constants?* 
 
 ## Lab2_2_hexToBCD
 
@@ -162,6 +166,16 @@ Is this obvious to a electrical or computer engineer working in the field?  **Ye
 
 #### Prompts
 
+*A BEL is a [Basic Element of Logic](https://www.rapidwright.io/docs/Xilinx_Architecture.html).  Start reading the link. What is a routing BEL most similar to?*  
+
+![1549369911764](1549369911764.png)
+
+*Where are PIPs in the above screen shot?*
+
+*Can you see a PIP in the device Implementation screen shots above?*
+
+*What value is RapidWright adding to Vivado?*
+
 *The always @\* means execute when anything on the right hand side of the equal signs changes. What is the only thing on the right hand side of the equal sign?*
 
 *Within the module the lines of code all execute in parallel. Within the always begin .. end block, everything executes in sequence like a normal program. There are two more begin end blocks associated with if and else. What would a line of code look like if there was no begin end block after always, after if or after else?*
@@ -176,9 +190,9 @@ This project was solved by a Xilinx instructor with the following four modules:
 
 ![1549297451207](1549297451207.png)
 
-*Why would someone write code like this, when the verilog code in the project is possible?*
+*Why would someone write code like this, when the simple verilog code actually used in this project  is possible?*
 
-*There are other clues that this code is not RTL besides the heavy use of modules. What is it?*
+*There are other clues that this code is not RTL and old besides the heavy use of modules. What is it?*
 
 *The RTL schematic is very interesting. It has a symbol for comparing and a symbol for subtracting. A normal gate is not used. What are the equivalent symbols in logisim? (Attach screen shots)*
 
@@ -204,16 +218,35 @@ The goal is to display BCD with an LED representing 1, the switches representing
 
 #### Prompts
 
-Why the modules HexToBCD and BCDto7SegDisplay? Why not make it just one big, simple verilog project?
+*Why the modules HexToBCD and BCDto7SegDisplay?*
 
-Does the port interface for Hex to 7 Segment Display have to contain the two modules?
-
-
+*Why not make it just one big, simple verilog project?*
 
 
 
 ## Lab2_4_Adders
 
+The goal talked about last lab and this lab is to see something besides LUTs and routers. The goal is to see Fast Carry Logic implemented in the FPGA. There are several design issues:
+
+**User Interface ** 
+The maximum number on eight, 7segment displays is 99,999,999. This is  28 bits  ‭0101 1111 0101 1110 0000 1111 1111 in binary (hex). 
+
+​	1) What kind of math can we do with 16 switches that results in number between 0 and 0101 1111 0101 1110 0000 1111 1111? 
+​	2) Do we translate from hex to BCD first, then develop BCD math circuits to stay in BCD? Or do we stay in hex, develop hex math circuits and switch to BCD at the end? Is this for a bank or for a scientist?
+​	3) We can only see one segment at a time. We need a clock to switch between segments, in a circular fashion very fast. This way the segments look on, when really they are flashing.  But we haven't covered clocks yet. 
+
+**Vivado LUTs and MUX solution**
+
+ At what point does Vivado switch over from implementing with LUTs and Muxes into [Fast Carry Logic](https://www.xilinx.com/support/documentation/application_notes/xapp522-mux-design-techniques.pdf) .. the control logic below?   COUT stands for carry out. We can not implement the circuit below because we haven't covered clocks yet. 
+
+![1549368323140](1549368323140.png)
+
+Vivado is going to translate any math into truth tables.  A 6 input LUT can hold a 64 line truth table.  That leaves 22 bits requiring an additional 4,194,304 (4Meg) 6 input LUT's  and an identical number of 2 input, 1 select line muxes. 
+
+**Design Choices**
+
+Build 3 bit adder. Two groups of 3 switches, added together fit in four bits and can be displayed on one 7 segment display with an overflow or carry LED. 
+
 #### Port Interface
 
 #### RTL Schematic
@@ -226,33 +259,47 @@ Does the port interface for Hex to 7 Segment Display have to contain the two mod
 
 #### Prompts
 
-## Lab2_5_FastCarryLogic
+*The maximum of adding two four bit numbers is 5 bits. Why implement just a 3 bit adder? What at is so complicated about implementing a four bit adder with BCD output ?* 
 
-the goal of adders is to add fast .. all programs count .. increment. Multiply is many adds inside a computer. Divide is many subtracts.  Speeding up any mathematical operation means speeding up adding. .
+*There is [lots of information](https://www.xilinx.com/support/answers/53109.html) on the web about an older version of Vivado. It is misleading and should be avoided. What is it?*
 
-Adding, multiplying means learning how to Carry. The carry is what slows down adding.  This [paper](file:///C:/Users/FoersterGame/Downloads/adder_32b_clocked1.pdf) summaries research into fast Carry Logic as of 2017.  Part of the Xilinx FPGA is dedicated to implementing some form of fast carry logic.  
+*There is a lot of information on the web about an older version of -7 series devices. It is misleading and should be avoided. What is it?*  
 
-![1548790399124](1548790399124.png)
+*On the internet, you can find half-adders, full-adders, look ahead adders,  3 bit adder designs in both verilog and with gates. Why is it that there are no adder truth tables?* 
 
-The goal here is to implement some primitive fast carry logic and see if Vivado sees this attempt and changes the Adder of Lab 2-4. 
+*How many inputs and outputs would a three bit adder truth table have?* 
 
-#### Port Interface
+*Insert the 3 bit Truth Table for this lab here.*  
 
-#### Verilog Code
+*Check a row of it here.*
 
-#### RTL Schematic
+*How many rows would a 28 input truth table have?*
 
-#### Synthesis Schematic
+*How many LUTs are used in this project and how many are available in our FPGA (Look at Synthesis Utilization Report)?*
 
-#### Implementation Design Screen shot of something interesting
+*What is the largest adder truth table that could be built with all of them (# of inputs, outputs, and rows) ?*
 
-#### Testing
+*What are the chances that a four bit add with look ahead logic are going to implemented with LUTs by Vivado?*
 
-#### Prompts
+*Since fast carry logic is so important in speeding up math, what are the chances that Xilinx is going to use fast carry logic with verilog code containing 4 bit half adders, full adders and look ahead logic?*
+
+*Vivado instead wants us to use it's Intellectual Property. Explore the IP Catalogue. What is the Xilinx IPs' name?* 
+
+*Is Vivado's math IP free?* 
+
+*What are the maximum number of bits the Xilinx IP can add together?* 
+
+*Why does it require a clock?*
+
+*Is a clocked solution faster or slower than a LUT solution?*
+
+## Xilinx IP Adder
 
 
 
 ## excetra
+
+Verilog rules when array length on the left of the equal sign doesn't equal the array length on the right. 
 
 If the size specified is larger than the value for the specified constant, the number is padded to the left
 with 0’s except for the case where the left most bit is x or z then the padding is done with x or z. 

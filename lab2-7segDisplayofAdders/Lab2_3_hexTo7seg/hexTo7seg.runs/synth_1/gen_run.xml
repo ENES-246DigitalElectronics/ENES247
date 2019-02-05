@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1549309185">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1549372923">
   <File Type="PA-TCL" Name="hexTo7seg.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="hexTo7seg_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="hexTo7seg_reports.tcl"/>
@@ -13,7 +13,7 @@
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/imports/Lab2_3_hexTo7seg/BCDto7SegmentDisplay.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Lab2_3_hexTo7seg/BCDto7SegmentDisplay.v"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/BCDto7SegmentDisplay.v"/>
         <Attr Name="ImportTime" Val="1549306619"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -22,7 +22,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/imports/Lab2_3_hexTo7seg/hexToBCD.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Lab2_3_hexTo7seg/hexToBCD.v"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/hexToBCD.v"/>
         <Attr Name="ImportTime" Val="1549306619"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Mon Feb  4 14:40:15 2019
-| Host         : SET253-INS1C running 64-bit major release  (build 9200)
+| Date         : Tue Feb  5 08:22:24 2019
+| Host         : DESKTOP-KB2R4MG running 64-bit major release  (build 9200)
 | Command      : report_utilization -file hexTo7seg_utilization_synth.rpt -pb hexTo7seg_utilization_synth.pb
 | Design       : hexTo7seg
 | Device       : 7a100tcsg324-1
