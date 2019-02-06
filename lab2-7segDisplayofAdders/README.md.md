@@ -170,11 +170,15 @@ Is this obvious to a electrical or computer engineer working in the field?  **Ye
 
 ![1549369911764](1549369911764.png)
 
-*Where are PIPs in the above screen shot?*
+*What are PIPs?*
 
 *Can you see a PIP in the device Implementation screen shots above?*
 
+*What company wrote RapidWright?*
+
 *What value is RapidWright adding to Vivado?*
+
+*Given that there are other products similar to RapidWright from the same company, what does this tell you about the way the company develops software?*
 
 *The always @\* means execute when anything on the right hand side of the equal signs changes. What is the only thing on the right hand side of the equal sign?*
 
@@ -196,9 +200,9 @@ This project was solved by a Xilinx instructor with the following four modules:
 
 *The RTL schematic is very interesting. It has a symbol for comparing and a symbol for subtracting. A normal gate is not used. What are the equivalent symbols in logisim? (Attach screen shots)*
 
-*Are there any standard symbols for comparing and adding circuits on the internet? Spend 1 minute, link up what you can find or write nothing.* 
+*Are there any standard symbols for comparing and adding circuits on the internet? Spend 1 minute, link up what you can find that is close to what looks like a standard.* 
 
-*Spend 1 minute reading this [link](https://blog.digilentinc.com/fpga-configurable-logic-block/) with the goal of figuring out the difference between a SliceL and LUT.* *Write a phrase to describe how you are going to remember the difference .. for now.* 
+*Spend 1 minute reading this [link](https://blog.digilentinc.com/fpga-configurable-logic-block/) with the goal of figuring out the difference between a SliceL and LUT. Write a phrase to describe how you are going to remember the difference .. for now ... Doesn't have to be correct. It is a hypothesis that you carry around with you.*
 
 ## Lab2_3_hexTo7seg
 
