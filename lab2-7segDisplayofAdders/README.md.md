@@ -222,8 +222,6 @@ The goal is to display BCD with an LED representing 1, the switches representing
 
 *Why not make it just one big, simple verilog project?*
 
-
-
 ## Lab2_4_Adders
 
 The goal talked about last lab and this lab is to see something besides LUTs and routers. The goal is to see Fast Carry Logic implemented in the FPGA. There are several design issues:
@@ -251,6 +249,8 @@ Build 3 bit adder. Two groups of 3 switches, added together fit in four bits and
 
 #### RTL Schematic
 
+![1549455250299](1549455250299.png)
+
 #### Synthesis Schematic
 
 #### Implementation Design Screen shot of something interesting
@@ -259,19 +259,21 @@ Build 3 bit adder. Two groups of 3 switches, added together fit in four bits and
 
 #### Prompts
 
-*The maximum of adding two four bit numbers is 5 bits. Why implement just a 3 bit adder? What at is so complicated about implementing a four bit adder with BCD output ?* 
+*Describe the changes to the previous project that turned it into an adder in terms of the verilog code.*
 
-*There is [lots of information](https://www.xilinx.com/support/answers/53109.html) on the web about an older version of Vivado. It is misleading and should be avoided. What is it?*
+*The maximum of adding two four bit numbers is 5 bits. We are already displaying the 5th bit on an LED. Why not implement a 4 bit adder? What is so complicated about implementing a four bit adder with BCD output ?* 
 
-*There is a lot of information on the web about an older version of -7 series devices. It is misleading and should be avoided. What is it?*  
+*There is [lots of information](https://www.xilinx.com/support/answers/53109.html) on the web about an older version(s) of Vivado and Vivado's predecessor. This information is misleading and should be avoided. How can you do this?*
 
-*On the internet, you can find half-adders, full-adders, look ahead adders,  3 bit adder designs in both verilog and with gates. Why is it that there are no adder truth tables?* 
+*On the internet, you can find half-adders, full-adders, look ahead adders,  3 bit adder designs in both verilog and with gates. Why are there are no adder truth tables?* 
 
-*How many inputs and outputs would a three bit adder truth table have?* 
+*Create a 3 bit + 3 bit = 4 bit adder truth table and put it here. Suggest doing this with logisim, with a three bit adder, then have logisim analyze the circuit. Logisim will produce the truth table.*  
 
-*Insert the 3 bit Truth Table for this lab here.*  
+*How many LUTs would the logisim circuit consume, just for the purpose of adding?*
 
-*Check a row of it here.*
+*What does Vivado change this circuit into LUTs?*
+
+*Can you think of a more efficient way to use the LUTs than what Vivado did?*
 
 *How many rows would a 28 input truth table have?*
 
@@ -292,10 +294,6 @@ Build 3 bit adder. Two groups of 3 switches, added together fit in four bits and
 *Why does it require a clock?*
 
 *Is a clocked solution faster or slower than a LUT solution?*
-
-## Xilinx IP Adder
-
-
 
 ## excetra
 
