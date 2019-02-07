@@ -4,6 +4,12 @@ This is a another 3 hour, 1 credit lab course associated with ENES-246 which als
 
 This lab is patterned after the [Xilinx Vivado HDL Design Course](https://www.xilinx.com/support/university/vivado/vivado-teaching-material/hdl-design.html).
 
+## Documents to Become Familiar With
+
+Xilinx Configuration Logic Block CLB ug574
+Vivado 7Series FPGA Libraries of Primitives found in the CLB ug953
+Verilog and System Verilog commands that Vivado will Synthesize ug901
+
 ## Tools
 
 ​	Verilog (a programming language, very messy, lots of misleading internet references)
@@ -50,8 +56,6 @@ Grading is done after the lab is due. The grade is merely about completeness. Ha
 Drawings: Port Interface, FSM, ASM, AMSD
 
 Verilog Code
-
-
 
 ### Drawings  
 
