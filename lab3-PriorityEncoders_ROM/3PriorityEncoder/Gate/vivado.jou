@@ -1,0 +1,62 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Feb 11 09:33:05 2019
+# Process ID: 6840
+# Current directory: C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-PriorityEncoders_ROM/3PriorityEncoder/Gate
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9932 C:\Users\FoersterGame\Documents\GitHub\ENES247\lab3-PriorityEncoders_ROM\3PriorityEncoder\Gate\3PriorityEncoder.xpr
+# Log file: C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-PriorityEncoders_ROM/3PriorityEncoder/Gate/vivado.log
+# Journal file: C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-PriorityEncoders_ROM/3PriorityEncoder/Gate\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-PriorityEncoders_ROM/3PriorityEncoder/Gate/3PriorityEncoder.xpr
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-PriorityEncoders_ROM/3PriorityEncoder/Gate/3PriorityEncoder.srcs/sources_1/imports/3PriorityEncoder/priority_encoder_dataflow.sv] -no_script -reset -force -quiet
+remove_files  C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-PriorityEncoders_ROM/3PriorityEncoder/Gate/3PriorityEncoder.srcs/sources_1/imports/3PriorityEncoder/priority_encoder_dataflow.sv
+import_files -norecurse C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-PriorityEncoders_ROM/3PriorityEncoder/priority_encoder_dataflow.v
+synth_design -rtl -name rtl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+close_design
+open_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+close_project
+open_project C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-PriorityEncoders_ROM/3PriorityEncoder/RTL_Data_Flow/3PriorityEncoder.xpr
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-PriorityEncoders_ROM/3PriorityEncoder/RTL_Data_Flow/3PriorityEncoder.srcs/sources_1/imports/3PriorityEncoder/priority_encoder_dataflow.sv] -no_script -reset -force -quiet
+remove_files  C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-PriorityEncoders_ROM/3PriorityEncoder/RTL_Data_Flow/3PriorityEncoder.srcs/sources_1/imports/3PriorityEncoder/priority_encoder_dataflow.sv
+import_files -norecurse C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-PriorityEncoders_ROM/3PriorityEncoder/priority_encoder_dataflow.v
+export_ip_user_files -of_objects  [get_files C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-PriorityEncoders_ROM/3PriorityEncoder/RTL_Data_Flow/3PriorityEncoder.srcs/sources_1/imports/3PriorityEncoder/priority_encoder_dataflow.v] -no_script -reset -force -quiet
+remove_files  C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-PriorityEncoders_ROM/3PriorityEncoder/RTL_Data_Flow/3PriorityEncoder.srcs/sources_1/imports/3PriorityEncoder/priority_encoder_dataflow.v
+import_files -force -norecurse C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-PriorityEncoders_ROM/3PriorityEncoder/AllThree/3PriorityEncoder.srcs/sources_1/imports/3PriorityEncoder/priority_encoder_dataflow.sv
+synth_design -rtl -name rtl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+close_design
+open_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+close_project
+open_project C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-PriorityEncoders_ROM/3PriorityEncoder/RTL_One_Hot/3PriorityEncoder.xpr
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+synth_design -rtl -name rtl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+close_design
+open_run impl_1
