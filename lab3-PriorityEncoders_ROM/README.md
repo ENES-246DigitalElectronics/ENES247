@@ -1,7 +1,3 @@
-[The Manual with Examples](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_3/ug901-vivado-synthesis.pdf)
-
-[The starting point or hub of all Xilinx Manuals](https://www.xilinx.com/support/documentation-navigation/design-hubs/dh0018-vivado-synthesis-hub.html)
-
 ## 1Lut_Mux
 
 One goal might be to use the primitives within the FPGA CLB. Chapter 3 of the Vivado 7 Series Libraries  lists off the primitives. Chapter 4 describes how to implement them using VHDL and Verilog. Explore the LUT and MUX in this project. 
@@ -18,7 +14,9 @@ One goal might be to use the primitives within the FPGA CLB. Chapter 3 of the Vi
 
 #### Testing
 
-Look at the truth table in the Verilog code and be able to describe the switches needed to access a row in it and predict the output. 
+ 
+
+___
 
 #### Prompts
 
@@ -86,6 +84,10 @@ Look at the truth table in the Verilog code and be able to describe the switches
 
 #### Testing
 
+
+
+___
+
 #### Prompts 
 
 *How many of the outputs of the Decoder are positive at any given instant in time?*
@@ -105,14 +107,14 @@ Look at the truth table in the Verilog code and be able to describe the switches
 
 A encoder is different than a mux in that there are no select lines. Only one input out of all the inputs coming in is expected to be a 1.  So what happens if more than one input is a 1? Priority is assigned. For example, which child of all your children get's your attention if all are yelling at you at the same time? You have to choose. 
 
-In hardware, it is the outputs of other circuits that need attention. One circuit finished multiplying and the output needs to be transferred somewhere else so it can begin the next multiply. Meanwhile the keyboard circuit has taken the x and y coordinates, has detected the key is stuck, has stopped repeating the key, is beeping the user and needs to trigger software that displays a message on the screen "key stuck." Which takes priority if both are one at the same time?  
+In hardware, it is the outputs of other circuits that need attention. One circuit finished multiplying and the output needs to be transferred somewhere else so it can begin the next multiply. Meanwhile the keyboard circuit has taken the x and y coordinates, has detected the key is stuck, has stopped repeating the key, is beeping the user and needs to trigger software that displays a message on the screen "key stuck." Which takes priority if both are asking for CPU attention at the same time?   
 
 To deal with more than one input, the designer has to deal with two issues:   
 What is the priority order?
 
 What is the difference between the 0 net of the bus having a 1 on it asking for priority and silence .. nobody asking for priority? 
 
-It is a tricky, logic problem. Look at the first two rows of the truth table below. The first row is where none of the inputs are asking for attention. V=0 because Y1 and Y0 could be anything. 
+It is a tricky, logic problem. Look at the first two rows of the truth table below. The first row is where none of the inputs are asking for attention. V=0 because Y1 and Y0 could be anything ... notice that the truth table is only 5 rows long. With four inputs, it could be 16 rows long. 
 
 ![img](table4.JPG)
 
@@ -130,39 +132,47 @@ There four vivado projects. There are three different verilog expressions introd
 
 #### Testing
 
+
+
+---
+
 #### Prompts
 
-How is the gate verilog code different between AllThree and Gate?
+*How is the gate verilog code different between AllThree and Gate?*
 
-The first synthesizable System Verilog commands have been introduced. How can you tell by the source verilog file extension?  
+*The first synthesizable System Verilog commands have been introduced. How can you tell by the source verilog file extension?*  
 
-Where in the verilog "new project sequence of steps" are you given the option of creating system verilog or just plane verilog?
+**Where in the verilog "new project sequence of steps" are you given the option of creating system verilog or just plane verilog?*
 
-In what way does the DataFlow implementation use the if command?
+*In what way does the DataFlow implementation use the if command?*
 
-In AllThree, why would always @* work ... in addition to always_combo?
+*In AllThree, why would always @* work ... in addition to always_combo?*
 
-In System Verilog, what are the other two always commands?
+*In System Verilog, what are the other two always commands?*
 
-From a design point of view, which implementation of a priority encoder do you think Vivado expects engineers to ask it to implement? 
+*From a design point of view, which implementation of a priority encoder do you think Vivado expects engineers to ask it to implement?* 
 
-Which implementation of a priority encoder looks like the easiest to spot and see within a much much larger chunk of verilog code? 
+*Which implementation of a priority encoder looks like the easiest to spot and see within a much much larger chunk of verilog code?* 
 
-Which is probably the most sustainable (will be supported by vendors in the future, future engineers looking at the code will understand it)?  
+*Which is probably the most sustainable (will be supported by vendors in the future, future engineers looking at the code will understand it)?*  
 
-Which will be the easiest to change/modify?
+*Which will be the easiest to change/modify?*
 
-We have been told that implementation within the FGPA doesn't matter from a net and leaf cell count point of view. We don't see obvious controls that specify where within the chip everything is implemented. (It looks like resources next to the switch and LED pads are being used constantly.) But real quick in the future, speed is going to matter. Which of these priority encoder looks like it will be the fastest?
+*We have been told that implementation within the FGPA doesn't matter from a net and leaf cell count point of view. We don't see obvious controls that specify where within the chip everything is implemented. (It looks like resources next to the switch and LED pads are being used constantly.) But real quick in the future, speed is going to matter. Which of these priority encoder looks like it will be the fastest?*
 
-Why is speed not important to us right now?
+*Why is speed not important to us right now?*
+
+*Why is the for loop called [One-Hot](https://en.wikipedia.org/wiki/One-hot)?* 
+
+An alternative to if, if, if, if, if, ... if else is a case command. Both Case and If else Case command syntax was part of verilog.  This is why it is called "data_path". *Why do you think the if if if ...if else command introduced with System Verilog?* 
 
 ## 4ROMpattern
 
 #### Port Diagram
 
-#### Verilog Code
+#### Verilog Code ![1549965418284](1549965418284.png)
 
-#### RTL Schematic Screen shot
+#### RTL Schematic Screen shot![1549965505259](1549965505259.png)
 
 #### Synthesis Schematic Screen shot
 
@@ -172,9 +182,43 @@ Why is speed not important to us right now?
 
 
 
+___
+
 #### Prompts
 
+This program grabs data in a text file and puts it in ROM. There are several questions here. First this line in the verilog code just generates error messages. 
+
+![1549963293335](1549963293335.png)
+
+Google found [this](https://forums.xilinx.com/t5/Synthesis/Pathnames-for-Verilog-readmem-Datafiles-for-synthesis-Warning/td-p/775824) in response to typing in the error message.  *How many solutions to the problem are in the Xilinx user forum post?* 
+
+*Describe the solution that works in words:* 
+
+![1549963883327](1549963883327.png)
+
+*When is the file read by vivado (RTL analysis, synthesis, implementation or bitstream? )*
+
+*What does this tell you about the file's sustainability (easy to identify, easy to modify, easy to find)?*
+
+*After following the forum's post, what is the path to where the file actually lives?*
+
+*After synthesizing, where in a CLB do the contents of the text file go?* 
+
+Look at the .txt file. 
+
+*How many bits per row?*
+
+*How many rows?* 
+
+*Why so many rows?*
+
+*What do the bits in the text file represent?*
+
+*A [Mips CPU](https://en.wikipedia.org/wiki/MIPS_architecture#Jump_and_branch) contains a circuit similar to this. When does the circuit execute?*  
+
 ## 5ROMmultiply
+
+Your goal is to create a circuit that multiplies two bits together. Use the ROM. Create the text file. Create the code. Make it as RTL as possible. 
 
 #### Port Diagram
 
@@ -188,6 +232,9 @@ Why is speed not important to us right now?
 
 #### Testing
 
-Look at the truth table in the Verilog code and be able to describe the switches needed to access a row in it and predict the output. 
+ 
+
+___
 
 #### Prompts
+

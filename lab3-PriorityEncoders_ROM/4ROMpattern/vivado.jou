@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Feb 12 04:54:40 2019
+# Process ID: 8748
+# Current directory: C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-PriorityEncoders_ROM/4ROMpattern
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7560 C:\Users\FoersterGame\Documents\GitHub\ENES247\lab3-PriorityEncoders_ROM\4ROMpattern\4ROMpattern.xpr
+# Log file: C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-PriorityEncoders_ROM/4ROMpattern/vivado.log
+# Journal file: C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-PriorityEncoders_ROM/4ROMpattern\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-PriorityEncoders_ROM/4ROMpattern/4ROMpattern.xpr
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+close_project
