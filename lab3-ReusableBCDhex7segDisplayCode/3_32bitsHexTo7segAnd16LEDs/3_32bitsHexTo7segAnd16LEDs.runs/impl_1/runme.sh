@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Scott Foerster/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/3_32bitsHexTo7segAnd16LEDs/3_32bitsHexTo7segAnd16LEDs.runs/impl_1'
+HD_PWD='C:/Users/SET253-17U.HCCMAIN/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/3_32bitsHexTo7segAnd16LEDs/3_32bitsHexTo7segAnd16LEDs.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .write_bitstream.begin.rst
+/bin/touch .init_design.begin.rst
 EAStep vivado -log thirtyTwobitHexTo16LEDs.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source thirtyTwobitHexTo16LEDs.tcl -notrace
 
 

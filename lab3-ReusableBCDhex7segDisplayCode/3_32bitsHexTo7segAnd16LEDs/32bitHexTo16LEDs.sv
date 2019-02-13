@@ -1,9 +1,10 @@
 module thirtyTwobitHexTo16LEDs(
-    input bankSwitch, //bank or row of 16 LED's 
+//    input bankSwitch, //bank or row of 16 LED's 
     input clk,
     input reset,
     input stop_start,
     input [2:0] dp_selector,
+    input [2:0] SW,
     output reg [15:0] LED,
     output dp,
     output [7:0] anodes,
@@ -20,21 +21,24 @@ module thirtyTwobitHexTo16LEDs(
     end
     
     //switches 16 LED's from looking at the upper 16 bits of i, to looking at the lower 16 bits of i
-    always_comb if (~bankSwitch) LED = c_input[31:16]; else LED = c_input[15:0]; //separate combinational logic from flip flop (ff) logic
+//    always_comb if (~bankSwitch) LED = c_input[31:16]; else LED = c_input[15:0]; //separate combinational logic from flip flop (ff) logic
     
     //anode creator .. select 3 bits out of i
-    wire [2:0] anode_select;
-    assign anode_select = c_input[19:17];
+//    wire [2:0] anode_select;
+//    assign anode_select = c_input[19:17];
     
     //anode expansion
-    assign anodes = !(1 << anode_select); // is a decoder .. anode_select 3 bits could be 0,1,2,3,4,5,6,7 .. 
+    assign anodes = !(1 << SW); // is a decoder .. anode_select 3 bits could be 0,1,2,3,4,5,6,7 .. 
     
     //decimal place (dp) selector
-    assign dp = ~(anode_select & dp_selector); //only when they match will the decimal place be displayed
+    assign dp = ~(SW & dp_selector); //only when they match will the decimal place be displayed
     
     //hex selector
     wire [3:0] hex_to_display;
-    assign hex_to_display = c_input[anode_select]; // 3 bits of anode_select, grab 4 bits of c_input and put them in hex_to_display
+    assign hex_to_display = c_input[SW]; // 3 bits of anode_select, grab 4 bits of c_input and put them in hex_to_display
+    assign LED[15:8] = hex_to_display;
+    assign LED[2:0] = c_input[7:0];
+    
     
     //7-Seg Convertor .. intial values come from a spreadsheet analysis
     integer ac=16'h2812, bc=16'hd860, cc=16'hd004, dc=16'h8692, ec=16'h02ba, fc=16'h208e,gc=16'h1083;
