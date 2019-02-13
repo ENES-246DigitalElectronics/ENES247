@@ -1,5 +1,9 @@
 
 
+# Reusable BCD hex 7seg Display Code
+
+The  HexToBCD algorithm in the last lab worked for one hex group. The problem is that it needs to be extended from 4 bits to 32 bits. Clocks and counters need to be added. The goal is to get that done here.
+
 ## 1_32bitHexTo16LEDs
 
 This code tests the ability to count clock pulses and display 32 bits split into two groups of 16. SW[0] switches between the two groups. 
@@ -8,11 +12,25 @@ This code tests the ability to count clock pulses and display 32 bits split into
 
 #### Verilog Code
 
-#### RTL Schematic Screen shot
+#### ![1550065113070](1550065113070.png)
+
+#### RTL Schematic Screen shot![1550065060021](1550065060021.png)
+
+#### 
 
 #### Synthesis Schematic Screen shot
 
+![1550065504121](1550065504121.png)
+
 #### Implementation Device screen shot zoomed in on something interesting
+
+First Flip Flops Being Used, 
+
+![1550065753110](1550065753110.png)
+
+Carry Logic Being used
+
+![1550065640417](1550065640417.png)
 
 #### Testing
 
@@ -52,7 +70,7 @@ In addition, modify the number of bits counted, and add an overflow if needed or
 
 ## 3_32bitsHexTo7segAnd16LEDs
 
-This project is finished. Please finish the documentation of it. It has  the switch between the two banks of 16 LEDs. Don't bother adding this to the port diagram. 
+This project is not yet finished. Please finish the documentation of it. It has  the switch between the two banks of 16 LEDs. Don't bother adding this to the port diagram. 
 
 #### Port Diagram![Port7Seg](Port7Seg.svg)
 
@@ -60,9 +78,13 @@ This project is finished. Please finish the documentation of it. It has  the swi
 
 #### Verilog Code
 
-#### RTL Schematic Screen shot
+#### RTL Schematic Screen shot 
+
+![1550075749826](1550075749826.png)
 
 #### Synthesis Schematic Screen shot
+
+![1550076024235](1550076024235.png)
 
 #### Implementation Device screen shot zoomed in on something interesting
 

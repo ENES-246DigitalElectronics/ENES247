@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Feb 13 09:43:07 2019
+# Process ID: 980
+# Current directory: C:/Users/SET253-17U.HCCMAIN/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/1_32bitHexTo16LEDs
+# Command line: wbtcv.exe -mode batch -source C:/Users/SET253-17U.HCCMAIN/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/1_32bitHexTo16LEDs/1_32bitHexTo16LEDs.hw/webtalk/labtool_webtalk.tcl -notrace
+# Log file: C:/Users/SET253-17U.HCCMAIN/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/1_32bitHexTo16LEDs/webtalk.log
+# Journal file: C:/Users/SET253-17U.HCCMAIN/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/1_32bitHexTo16LEDs\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/SET253-17U.HCCMAIN/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/1_32bitHexTo16LEDs/1_32bitHexTo16LEDs.hw/webtalk/labtool_webtalk.tcl -notrace
