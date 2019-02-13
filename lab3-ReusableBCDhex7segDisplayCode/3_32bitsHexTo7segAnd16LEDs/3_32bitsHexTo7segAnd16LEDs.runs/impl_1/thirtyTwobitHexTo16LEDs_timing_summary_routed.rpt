@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Wed Feb 13 11:40:27 2019
-| Host         : SET253-17C running 64-bit major release  (build 9200)
+| Date         : Wed Feb 13 13:36:30 2019
+| Host         : LabSet332 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file thirtyTwobitHexTo16LEDs_timing_summary_routed.rpt -pb thirtyTwobitHexTo16LEDs_timing_summary_routed.pb -rpx thirtyTwobitHexTo16LEDs_timing_summary_routed.rpx -warn_on_violation
 | Design       : thirtyTwobitHexTo16LEDs
 | Device       : 7a100t-csg324
@@ -81,7 +81,7 @@ Table of Contents
 
 6. checking no_output_delay
 ---------------------------
- There are 29 ports with no output delay specified. (HIGH)
+ There are 21 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 

@@ -67,9 +67,8 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
-  set_param synth.incrementalSynthesisCache C:/Users/SET253~1.HCC/AppData/Local/Temp/.Xil_SET253-17U/Vivado-2440-SET253-17C/incrSyn
   open_checkpoint thirtyTwobitHexTo16LEDs_routed.dcp
-  set_property webtalk.parent_dir C:/Users/SET253-17U.HCCMAIN/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/3_32bitsHexTo7segAnd16LEDs/3_32bitsHexTo7segAnd16LEDs.cache/wt [current_project]
+  set_property webtalk.parent_dir {C:/Users/Scott Foerster/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/3_32bitsHexTo7segAnd16LEDs/3_32bitsHexTo7segAnd16LEDs.cache/wt} [current_project]
   catch { write_mem_info -force thirtyTwobitHexTo16LEDs.mmi }
   write_bitstream -force thirtyTwobitHexTo16LEDs.bit 
   catch {write_debug_probes -quiet -force thirtyTwobitHexTo16LEDs}

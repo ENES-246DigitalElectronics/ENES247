@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Wed Feb 13 11:40:27 2019
-| Host             : SET253-17C running 64-bit major release  (build 9200)
+| Date             : Wed Feb 13 13:36:30 2019
+| Host             : LabSet332 running 64-bit major release  (build 9200)
 | Command          : report_power -file thirtyTwobitHexTo16LEDs_power_routed.rpt -pb thirtyTwobitHexTo16LEDs_power_summary_routed.pb -rpx thirtyTwobitHexTo16LEDs_power_routed.rpx
 | Design           : thirtyTwobitHexTo16LEDs
 | Device           : xc7a100tcsg324-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 8.378        |
+| Total On-Chip Power (W)  | 8.357        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 8.217        |
-| Device Static (W)        | 0.162        |
+| Dynamic (W)              | 8.196        |
+| Device Static (W)        | 0.161        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 46.8         |
-| Junction Temperature (C) | 63.2         |
+| Max Ambient (C)          | 46.9         |
+| Junction Temperature (C) | 63.1         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,17 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.062 |      104 |       --- |             --- |
-|   LUT as Logic |     0.052 |       32 |     63400 |            0.05 |
+| Slice Logic    |     0.066 |       96 |       --- |             --- |
+|   LUT as Logic |     0.057 |       28 |     63400 |            0.04 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   CARRY4       |     0.002 |        8 |     15850 |            0.05 |
 |   Register     |     0.001 |       32 |    126800 |            0.03 |
 |   F7/F8 Muxes  |    <0.001 |        1 |     63400 |           <0.01 |
 |   Others       |     0.000 |        2 |       --- |             --- |
-| Signals        |     0.105 |      103 |       --- |             --- |
-| I/O            |     8.050 |       37 |       210 |           17.62 |
-| Static Power   |     0.162 |          |           |                 |
-| Total          |     8.378 |          |           |                 |
+| Signals        |     0.105 |       95 |       --- |             --- |
+| I/O            |     8.025 |       37 |       210 |           17.62 |
+| Static Power   |     0.161 |          |           |                 |
+| Total          |     8.357 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,9 +72,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.250 |       0.183 |      0.067 |
-| Vccaux    |       1.800 |     0.319 |       0.294 |      0.024 |
-| Vcco33    |       3.300 |     2.278 |       2.274 |      0.004 |
+| Vccint    |       1.000 |     0.254 |       0.187 |      0.067 |
+| Vccaux    |       1.800 |     0.318 |       0.293 |      0.024 |
+| Vcco33    |       3.300 |     2.271 |       2.267 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -139,7 +139,7 @@ Table of Contents
 +-------------------------+-----------+
 | Name                    | Power (W) |
 +-------------------------+-----------+
-| thirtyTwobitHexTo16LEDs |     8.217 |
+| thirtyTwobitHexTo16LEDs |     8.196 |
 +-------------------------+-----------+
 
 

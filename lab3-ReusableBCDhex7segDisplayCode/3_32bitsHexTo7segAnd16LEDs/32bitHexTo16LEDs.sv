@@ -1,5 +1,5 @@
 module thirtyTwobitHexTo16LEDs(
-    input bankSwitch,
+    input bankSwitch, //bank or row of 16 LED's 
     input clk,
     input reset,
     input stop_start,
@@ -27,10 +27,10 @@ module thirtyTwobitHexTo16LEDs(
     assign anode_select = c_input[19:17];
     
     //anode expansion
-    assign anodes = 1 << anode_select; // is a decoder .. anode_select 3 bits could be 0,1,2,3,4,5,6,7 .. 
+    assign anodes = !(1 << anode_select); // is a decoder .. anode_select 3 bits could be 0,1,2,3,4,5,6,7 .. 
     
     //decimal place (dp) selector
-    assign dp = anode_select & dp_selector; //only when they match will the decimal place be displayed
+    assign dp = ~(anode_select & dp_selector); //only when they match will the decimal place be displayed
     
     //hex selector
     wire [3:0] hex_to_display;
@@ -38,13 +38,13 @@ module thirtyTwobitHexTo16LEDs(
     
     //7-Seg Convertor .. intial values come from a spreadsheet analysis
     integer ac=16'h2812, bc=16'hd860, cc=16'hd004, dc=16'h8692, ec=16'h02ba, fc=16'h208e,gc=16'h1083;
-    assign a = ac[hex_to_display]; // all these are muxes, hex_to_display selects one of the constants 16 bits
-    assign b = bc[hex_to_display];
-    assign c = cc[hex_to_display];
-    assign d = dc[hex_to_display];
-    assign e = ec[hex_to_display];
-    assign f = fc[hex_to_display];
-    assign g = gc[hex_to_display];
+    assign a = ~ac[hex_to_display]; // all these are muxes, hex_to_display selects one of the constants 16 bits
+    assign b = ~bc[hex_to_display];
+    assign c = ~cc[hex_to_display];
+    assign d = ~dc[hex_to_display];
+    assign e = ~ec[hex_to_display];
+    assign f = ~fc[hex_to_display];
+    assign g = ~gc[hex_to_display];
         
 endmodule
 
