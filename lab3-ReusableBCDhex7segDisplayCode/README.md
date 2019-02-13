@@ -1,9 +1,5 @@
 
 
-# Reusable BCD hex 7seg Display Code
-
-The  HexToBCD algorithm in the last lab worked for one hex group. The problem is that it needs to be extended from 4 bits to 32 bits. Clocks and counters need to be added. The goal is to get that done here.
-
 ## 1_32bitHexTo16LEDs
 
 This code tests the ability to count clock pulses and display 32 bits split into two groups of 16. SW[0] switches between the two groups. 
@@ -12,25 +8,11 @@ This code tests the ability to count clock pulses and display 32 bits split into
 
 #### Verilog Code
 
-#### ![1550065113070](1550065113070.png)
-
-#### RTL Schematic Screen shot![1550065060021](1550065060021.png)
-
-#### 
+#### RTL Schematic Screen shot
 
 #### Synthesis Schematic Screen shot
 
-![1550065504121](1550065504121.png)
-
 #### Implementation Device screen shot zoomed in on something interesting
-
-First Flip Flops Being Used, 
-
-![1550065753110](1550065753110.png)
-
-Carry Logic Being used
-
-![1550065640417](1550065640417.png)
 
 #### Testing
 
