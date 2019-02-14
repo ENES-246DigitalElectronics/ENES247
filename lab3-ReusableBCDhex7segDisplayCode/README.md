@@ -62,18 +62,6 @@ In addition, modify the number of bits counted, and add an overflow if needed or
 
 #### Testing
 
- 2_32bitBCDto16LEDs
-
-Modify the above code using this [algorithm](https://pubweb.eng.utah.edu/~nmcdonal/Tutorials/BCDTutorial/BCDConversion.html) to work with 32 bits rather than 16. Which of these three is the starting point?  
-
-![1550060430510](1550060430510.png)
-
-![1550060478999](1550060478999.png)
-
-![1550060559247](1550060559247.png)
-
-In addition, modify the number of bits counted, and add an overflow if needed or a reset to the counter so it doesn't appear to count to a large number and then hang or do something strange. 
-
 ## 3_bitSlicing
 
 The goal  is to find a way to grab 4 bits out a group of 32 in a single line of code.  This technique is called bit slicing.  This is similar to slicing up a string or an array in other languages. 
@@ -122,7 +110,7 @@ This project is not yet finished. Please finish the documentation of it. It has 
 
 #### RTL Schematic Screen shot 
 
-![1550075749826](1550075749826.png)
+![1550152150693](1550152150693.png)
 
 #### Synthesis Schematic Screen shot
 
