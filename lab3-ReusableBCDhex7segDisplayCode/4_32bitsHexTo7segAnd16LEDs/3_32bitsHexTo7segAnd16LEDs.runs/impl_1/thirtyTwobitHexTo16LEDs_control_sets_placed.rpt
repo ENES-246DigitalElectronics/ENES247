@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Thu Feb 14 13:49:48 2019
-| Host         : LabSet332 running 64-bit major release  (build 9200)
+| Date         : Thu Feb 14 16:21:27 2019
+| Host         : SET253-17C running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file thirtyTwobitHexTo16LEDs_control_sets_placed.rpt
 | Design       : thirtyTwobitHexTo16LEDs
 | Device       : xc7a100t
@@ -48,7 +48,7 @@ Table of Contents
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              26 |            6 |
+| Yes          | No                    | Yes                    |              34 |           10 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -59,7 +59,7 @@ Table of Contents
 +----------------+---------------------+------------------+------------------+----------------+
 |  Clock Signal  |    Enable Signal    | Set/Reset Signal | Slice Load Count | Bel Load Count |
 +----------------+---------------------+------------------+------------------+----------------+
-|  clk_IBUF_BUFG | c_input[25]_i_1_n_0 | reset_IBUF       |                6 |             26 |
+|  clk_IBUF_BUFG | c_input[33]_i_1_n_0 | reset_IBUF       |               10 |             34 |
 +----------------+---------------------+------------------+------------------+----------------+
 
 

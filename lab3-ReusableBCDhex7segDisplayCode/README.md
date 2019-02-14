@@ -58,7 +58,7 @@ ___
 
 ## 2_32bitBCDto16LEDs
 
-Modify the above code using this [algorithm](https://pubweb.eng.utah.edu/~nmcdonal/Tutorials/BCDTutorial/BCDConversion.html) to work with 32 bits rather than 16. Which of these three is the starting point?  
+Modify the above code using this [algorithm](https://pubweb.eng.utah.edu/~nmcdonal/Tutorials/BCDTutorial/BCDConversion.html) to work with 32 bits rather than 16. *Which of these three is the starting point?*  
 
 ![1550060430510](1550060430510.png)
 
@@ -79,6 +79,8 @@ In addition, modify the number of bits counted, and add an overflow if needed or
 #### Implementation Device screen shot zoomed in on something interesting
 
 #### Testing
+
+---
 
 ## 3_bitSlicing
 
