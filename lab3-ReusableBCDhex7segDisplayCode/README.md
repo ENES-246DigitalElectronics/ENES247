@@ -62,13 +62,55 @@ In addition, modify the number of bits counted, and add an overflow if needed or
 
 #### Testing
 
- 
+ 2_32bitBCDto16LEDs
+
+Modify the above code using this [algorithm](https://pubweb.eng.utah.edu/~nmcdonal/Tutorials/BCDTutorial/BCDConversion.html) to work with 32 bits rather than 16. Which of these three is the starting point?  
+
+![1550060430510](1550060430510.png)
+
+![1550060478999](1550060478999.png)
+
+![1550060559247](1550060559247.png)
+
+In addition, modify the number of bits counted, and add an overflow if needed or a reset to the counter so it doesn't appear to count to a large number and then hang or do something strange. 
+
+## 3_bitSlicing
+
+The goal  is to find a way to grab 4 bits out a group of 32 in a single line of code.  This technique is called bit slicing.  This is similar to slicing up a string or an array in other languages. 
+
+#### Port Diagram
+
+![bitSlicing](bitSlicing.svg)
+
+#### Verilog Code 
+
+![1550142135894](1550142135894.png)
+
+#### RTL Schematic Screen shot
+
+![1550141244347](1550141244347.png)
+
+#### Synthesis Schematic Screen shot
+
+![1550141427806](1550141427806.png)
+
+#### Implementation Device screen shot zoomed in on something interesting
+
+Four Luts are used to handle the multiplying asked for in the bit slicing.
+
+![1550142512899](1550142512899.png)
+
+#### Testing
+
+3 Select bits select 1 of 8, 4 bit groups from a 32 bit constant and display on LEDs.  
 
 ------
 
 #### Prompts
 
-## 3_32bitsHexTo7segAnd16LEDs
+Slicing is part of a number of languages including  [python](https://www.programiz.com/python-programming/methods/built-in/slice) , [matlab](https://stackoverflow.com/questions/11318724/matlabs-slice-function-not-working-as-desired) and is a common search term to find something in other languages [C](https://stackoverflow.com/questions/14618342/copying-a-subset-of-an-array-into-another-array-array-slicing-in-c), [regular expressions](https://stackoverflow.com/questions/35578470/how-to-slice-characters-from-string-using-regex). *Is slice a concept or syntax in verilog*?
+
+## 4_32bitsHexTo7segAnd16LEDs
 
 This project is not yet finished. Please finish the documentation of it. It has  the switch between the two banks of 16 LEDs. Don't bother adding this to the port diagram. 
 
@@ -96,7 +138,7 @@ This project is not yet finished. Please finish the documentation of it. It has 
 
 #### Prompts
 
-## 4_32bitsHexToBCDto7segAnd16LEDs
+## 5_32bitsHexToBCDto7segAnd16LEDs
 
 Add your 32bitHextoBCD code to the above project. Replace any of the modules that you see with more attractive code. Add comments that make it easier to understand. 
 

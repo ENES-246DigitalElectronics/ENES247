@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Feb 14 04:13:46 2019
+# Process ID: 6108
+# Current directory: C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/3_32bitsHexTo7segAnd16LEDs
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7940 C:\Users\FoersterGame\Documents\GitHub\ENES247\lab3-ReusableBCDhex7segDisplayCode\3_32bitsHexTo7segAnd16LEDs\3_32bitsHexTo7segAnd16LEDs.xpr
+# Log file: C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/3_32bitsHexTo7segAnd16LEDs/vivado.log
+# Journal file: C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/3_32bitsHexTo7segAnd16LEDs\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/3_32bitsHexTo7segAnd16LEDs/3_32bitsHexTo7segAnd16LEDs.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/3_32bitsHexTo7segAnd16LEDs'
+INFO: [Project 1-313] Project file moved from 'C:/Users/SET253-17U.HCCMAIN/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/3_32bitsHexTo7segAnd16LEDs' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/3_32bitsHexTo7segAnd16LEDs/3_32bitsHexTo7segAnd16LEDs.ip_user_files', nor could it be found using path 'C:/Users/SET253-17U.HCCMAIN/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/3_32bitsHexTo7segAnd16LEDs/3_32bitsHexTo7segAnd16LEDs.ip_user_files'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 14 04:31:12 2019...
