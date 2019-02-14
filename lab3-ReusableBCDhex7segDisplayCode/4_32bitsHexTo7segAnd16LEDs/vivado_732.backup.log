@@ -1,0 +1,178 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Feb 14 08:34:37 2019
+# Process ID: 732
+# Current directory: C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/4_32bitsHexTo7segAnd16LEDs
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6088 C:\Users\FoersterGame\Documents\GitHub\ENES247\lab3-ReusableBCDhex7segDisplayCode\4_32bitsHexTo7segAnd16LEDs\3_32bitsHexTo7segAnd16LEDs.xpr
+# Log file: C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/4_32bitsHexTo7segAnd16LEDs/vivado.log
+# Journal file: C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/4_32bitsHexTo7segAnd16LEDs\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/4_32bitsHexTo7segAnd16LEDs/3_32bitsHexTo7segAnd16LEDs.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/4_32bitsHexTo7segAnd16LEDs'
+INFO: [Project 1-313] Project file moved from 'C:/Users/SET253-17U.HCCMAIN/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/3_32bitsHexTo7segAnd16LEDs' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/4_32bitsHexTo7segAnd16LEDs/3_32bitsHexTo7segAnd16LEDs.ip_user_files', nor could it be found using path 'C:/Users/SET253-17U.HCCMAIN/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/3_32bitsHexTo7segAnd16LEDs/3_32bitsHexTo7segAnd16LEDs.ip_user_files'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'.
+update_compile_order -fileset sources_1
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: thirtyTwobitHexTo16LEDs
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 884.539 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'thirtyTwobitHexTo16LEDs' [C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/4_32bitsHexTo7segAnd16LEDs/32bitHexTo16LEDs.sv:1]
+WARNING: [Synth 8-5788] Register c_input_reg in module thirtyTwobitHexTo16LEDs is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/4_32bitsHexTo7segAnd16LEDs/32bitHexTo16LEDs.sv:18]
+INFO: [Synth 8-6155] done synthesizing module 'thirtyTwobitHexTo16LEDs' (1#1) [C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/4_32bitsHexTo7segAnd16LEDs/32bitHexTo16LEDs.sv:1]
+WARNING: [Synth 8-3917] design thirtyTwobitHexTo16LEDs has port LED[13] driven by constant 0
+WARNING: [Synth 8-3917] design thirtyTwobitHexTo16LEDs has port LED[12] driven by constant 0
+WARNING: [Synth 8-3917] design thirtyTwobitHexTo16LEDs has port LED[3] driven by constant 0
+WARNING: [Synth 8-3917] design thirtyTwobitHexTo16LEDs has port LED[2] driven by constant 0
+WARNING: [Synth 8-3917] design thirtyTwobitHexTo16LEDs has port LED[1] driven by constant 0
+WARNING: [Synth 8-3917] design thirtyTwobitHexTo16LEDs has port anodes[7] driven by constant 0
+WARNING: [Synth 8-3917] design thirtyTwobitHexTo16LEDs has port anodes[6] driven by constant 0
+WARNING: [Synth 8-3917] design thirtyTwobitHexTo16LEDs has port anodes[5] driven by constant 0
+WARNING: [Synth 8-3917] design thirtyTwobitHexTo16LEDs has port anodes[4] driven by constant 0
+WARNING: [Synth 8-3917] design thirtyTwobitHexTo16LEDs has port anodes[3] driven by constant 0
+WARNING: [Synth 8-3917] design thirtyTwobitHexTo16LEDs has port anodes[2] driven by constant 0
+WARNING: [Synth 8-3917] design thirtyTwobitHexTo16LEDs has port anodes[1] driven by constant 0
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 884.539 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 884.539 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 884.539 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 3 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 15 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/4_32bitsHexTo7segAnd16LEDs/3_32bitsHexTo7segAnd16LEDs.srcs/constrs_1/imports/3_32bitsHexTo7segAnd16LEDs/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/4_32bitsHexTo7segAnd16LEDs/3_32bitsHexTo7segAnd16LEDs.srcs/constrs_1/imports/3_32bitsHexTo7segAnd16LEDs/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1192.082 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1230.387 ; gain = 345.848
+8 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 1230.387 ; gain = 345.848
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Thu Feb 14 08:49:24 2019] Launched synth_1...
+Run output will be captured here: C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/4_32bitsHexTo7segAnd16LEDs/3_32bitsHexTo7segAnd16LEDs.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Thu Feb 14 08:49:53 2019] Launched impl_1...
+Run output will be captured here: C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/4_32bitsHexTo7segAnd16LEDs/3_32bitsHexTo7segAnd16LEDs.runs/impl_1/runme.log
+close_design
+open_run impl_1
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1730.875 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1730.875 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1730.875 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 1811.027 ; gain = 573.887
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+close_design
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: thirtyTwobitHexTo16LEDs
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1834.688 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'thirtyTwobitHexTo16LEDs' [C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/4_32bitsHexTo7segAnd16LEDs/32bitHexTo16LEDs.sv:1]
+WARNING: [Synth 8-5788] Register c_input_reg in module thirtyTwobitHexTo16LEDs is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/4_32bitsHexTo7segAnd16LEDs/32bitHexTo16LEDs.sv:18]
+INFO: [Synth 8-6155] done synthesizing module 'thirtyTwobitHexTo16LEDs' (1#1) [C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/4_32bitsHexTo7segAnd16LEDs/32bitHexTo16LEDs.sv:1]
+WARNING: [Synth 8-3917] design thirtyTwobitHexTo16LEDs has port LED[13] driven by constant 0
+WARNING: [Synth 8-3917] design thirtyTwobitHexTo16LEDs has port LED[12] driven by constant 0
+WARNING: [Synth 8-3917] design thirtyTwobitHexTo16LEDs has port LED[3] driven by constant 0
+WARNING: [Synth 8-3917] design thirtyTwobitHexTo16LEDs has port LED[2] driven by constant 0
+WARNING: [Synth 8-3917] design thirtyTwobitHexTo16LEDs has port LED[1] driven by constant 0
+WARNING: [Synth 8-3917] design thirtyTwobitHexTo16LEDs has port anodes[7] driven by constant 0
+WARNING: [Synth 8-3917] design thirtyTwobitHexTo16LEDs has port anodes[6] driven by constant 0
+WARNING: [Synth 8-3917] design thirtyTwobitHexTo16LEDs has port anodes[5] driven by constant 0
+WARNING: [Synth 8-3917] design thirtyTwobitHexTo16LEDs has port anodes[4] driven by constant 0
+WARNING: [Synth 8-3917] design thirtyTwobitHexTo16LEDs has port anodes[3] driven by constant 0
+WARNING: [Synth 8-3917] design thirtyTwobitHexTo16LEDs has port anodes[2] driven by constant 0
+WARNING: [Synth 8-3917] design thirtyTwobitHexTo16LEDs has port anodes[1] driven by constant 0
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1834.688 ; gain = 0.000
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1834.688 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1834.688 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 3 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 15 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/4_32bitsHexTo7segAnd16LEDs/3_32bitsHexTo7segAnd16LEDs.srcs/constrs_1/imports/3_32bitsHexTo7segAnd16LEDs/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/4_32bitsHexTo7segAnd16LEDs/3_32bitsHexTo7segAnd16LEDs.srcs/constrs_1/imports/3_32bitsHexTo7segAnd16LEDs/Nexys4DDR_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1834.688 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1834.688 ; gain = 0.000
+7 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+close_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 14 08:57:13 2019...
