@@ -4,9 +4,9 @@
 
 The  HexToBCD algorithm in the last lab worked for one hex group. The problem is that it needs to be extended from 4 bits to 32 bits. Decoders, clocks and counters need to be added. The goal is to get that done here.
 
-## Figure out what a decoder does. Explain in the testing.
+Figure out what a decoder does. Explain in the testing.
 
-## 2Decoder
+## 0Decoder
 
 #### Port Diagram
 
