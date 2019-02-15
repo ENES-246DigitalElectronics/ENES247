@@ -261,25 +261,61 @@ Suppose that someone complains that the 7seg (or LED) displays are too dim or va
 
 ## 5_32bitsHexTo7seg
 
-This project is not yet finished. Please finish the documentation of it. It has  the switch between the two banks of 16 LEDs. Don't bother adding this to the port diagram. 
+This is working! Goal is to figure out how to use it in future labs.
 
 #### Port Diagram![Port7Seg](Port7Seg.svg)
 
 #### Verilog Code
 
+![1550262534509](1550262534509.png)
+
 #### RTL Schematic Screen shot 
+
+![1550261669602](1550261669602.png)
 
 #### Synthesis Schematic Screen shot
 
+![1550261786527](1550261786527.png)
+
 #### Implementation Device screen shot zoomed in on something interesting
+
+#### 
+
+ Lots of stuff going on
+
+![1550262021286](1550262021286.png)
+
+Lot more flip flops being used to count, remember things.
+
+![1550262335962](1550262335962.png)
+
+------
 
 #### Testing
 
- 
+Left most switch[15]  pauses the counting.
+Switch[14] resets to 0, pausing on a random segment
+Switches 0 through 2 control the decimal place. 
 
 ------
 
 #### Prompts
+
+*What does the utilization report look like?*
+
+![1550263073845](1550263073845.png)
+
+*Which* *counter would you delete if another program was controlling the number to be displayed? Cut and paste a picture of the code that would be deleted in order to do this.*
+
+![1550263932331](1550263932331.png)
+
+
+
+*What 32 bit variable name that you would add as an input to this module, and connect it to a top level with something to display? (Hint right now it is seeded with a constant.)* c_input
+
+*Are clk, reset, stop_start, count_clk, divider_counter needed if the counter clock is removed?* clk is still needed. Everything else will not be mentioned in the code if the counter clock is removed. 
+
+*What will have to be changed if the 32 bit Hex to BCD code is added?* c_input will be feed into the hex to BCD circuit, the output of the circuit will require modification of the //hex selector circuit, replacing c_input. 
 
 ## 5_32bitsHexToBCDto7segAnd16LEDs
 
