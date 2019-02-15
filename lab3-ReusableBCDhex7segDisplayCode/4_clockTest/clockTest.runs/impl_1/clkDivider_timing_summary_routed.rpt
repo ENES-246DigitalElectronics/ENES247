@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Fri Feb 15 04:22:54 2019
-| Host         : DESKTOP-KB2R4MG running 64-bit major release  (build 9200)
+| Date         : Fri Feb 15 11:10:05 2019
+| Host         : SET253-17C running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file clkDivider_timing_summary_routed.rpt -pb clkDivider_timing_summary_routed.pb -rpx clkDivider_timing_summary_routed.rpx -warn_on_violation
 | Design       : clkDivider
 | Device       : 7a100t-csg324
@@ -52,7 +52,7 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 64 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+ There are 96 register/latch pins with no clock driven by root clock pin: clk (HIGH)
 
 
 2. checking constant_clock
@@ -67,7 +67,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 128 pins that are not constrained for maximum delay. (HIGH)
+ There are 192 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -81,7 +81,7 @@ Table of Contents
 
 6. checking no_output_delay
 ---------------------------
- There are 11 ports with no output delay specified. (HIGH)
+ There are 19 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
