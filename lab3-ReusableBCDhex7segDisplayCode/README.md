@@ -199,7 +199,7 @@ This requires 8 sevenSegDisplays. So our maximum Hex input is 28 bits. The resul
 
 ![1550060559247](1550060559247.png)
 
-We could make the 2 Hex values or 8 bits changeable. Perhaps 9F at the end. This way there would be 10 values that would change the BCD output and 6 values that would cause an overflow. Can we add code to detect an overflow? Would have to capture MSB value of a 1 before a left shift and attach it to an LED. 
+We could make the 2 Hex values or 8 bits changeable. Perhaps 9F at the end. This way there would be 10 values that would change the BCD output and 6 values that would cause an overflow. Can we add code to detect an overflow? Would have to capture MSB value of a 1 before a left shift, capture it in a reg and attach it to an LED. 
 
 Test the starting point code, and then write the extended code and document it here. 
 
@@ -317,7 +317,11 @@ Switches 0 through 2 control the decimal place.
 
 *What will have to be changed if the 32 bit Hex to BCD code is added?* c_input will be feed into the hex to BCD circuit, the output of the circuit will require modification of the //hex selector circuit, replacing c_input. 
 
-## 5_32bitsHexToBCDto7segAnd16LEDs
+*What variable controls how fast the counting is done?* divide_counter.
+
+*To slow down the counting, what would need to be done ... make the number larger or smaller?* Larger. 
+
+## 6_32bitsHexToBCDto7segAnd16LEDs
 
 Add your 32bitHextoBCD code to the above project. Replace any of the modules that you see with more attractive code. Add comments that make it easier to understand. 
 
