@@ -12,21 +12,21 @@ Figure out what a decoder does. Explain in the testing.
 
 #### Verilog Code
 
-![1550224538899](1550224538899.png)
+![1550224538899](./assets/1550224538899.png)
 
 #### RTL Schematic Screen shot
 
-![1550224497514](1550224497514.png)
+![1550224497514](./assets/1550224497514.png)
 
 #### Synthesis Schematic Screen shot
 
-![1550224773061](1550224773061.png)
+![1550224773061](./assets/1550224773061.png)
 
 #### Implementation Device screen shot zoomed in on something interesting
 
 Nothing new .. just a LUT
 
-![1550224712434](1550224712434.png)
+![1550224712434](./assets/1550224712434.png)
 
 #### Testing
 
@@ -56,17 +56,17 @@ This code tests the ability to count clock pulses and display 32 bits split into
 
 #### Synthesis Schematic Screen shot
 
-![1550065504121](1550065504121.png)
+![1550065504121](./assets/1550065504121.png)
 
 #### Implementation Device screen shot zoomed in on something interesting
 
 First Flip Flops Being Used, 
 
-![1550065753110](1550065753110.png)
+![1550065753110](./assets/1550065753110.png)
 
 Carry Logic Being used
 
-![1550065640417](1550065640417.png)
+![1550065640417](./assets/1550065640417.png)
 
 #### Testing
 
@@ -87,31 +87,31 @@ The goal  is to find a way to grab 4 bits out a group of 32 in a single line of 
 
 #### Port Diagram
 
-![bitSlicing](bitSlicing.svg)
+![bitSlicing](./assets/bitSlicing.svg)
 
 #### Verilog Code 
 
-![1550142135894](1550142135894.png)
+![1550142135894](./assets/1550142135894.png)
 
 #### RTL Schematic Screen shot
 
-![1550141244347](1550141244347.png)
+![1550141244347](./assets/1550141244347.png)
 
 #### Synthesis Schematic Screen shot
 
-![1550141427806](1550141427806.png)
+![1550141427806](./assets/1550141427806.png)
 
 #### Implementation Device screen shot zoomed in on something interesting
 
 Four Luts are used to handle the multiplying asked for in the bit slicing.
 
-![1550142512899](1550142512899.png)
+![1550142512899](./assets/1550142512899.png)
 
 #### Testing
 
 3 Select bits select 1 of 8, 4 bit groups from a 32 bit constant and display on LEDs.  The constant is inside the port diagram:
 
-![bitSlicing](bitSlicing.svg)
+![bitSlicing](./assets/bitSlicing.svg)
 
 ------
 
@@ -134,7 +134,7 @@ On page 222 in Dec. 19, 2018 version of ug901 is described as  "Variable Part Se
 
 90% confident .. it has worked in the past. No reason for it to stop working now.
 
-![1550236958341](1550236958341.png)Look at this chart describing the growth of Verilog/SystemVerilog. The 2017 standard, reportedly did not add any new functionality to the 2012 standard. *The "+:" concept is actually listed on this chart. What is it's name?*  [Variable part select](https://www.google.com/search?q=verilog+variable+part+select&rlz=1C1CHZL_enUS735US735&oq=verilog+variable+part+select)
+![1550236958341](./assets/1550236958341.png)Look at this chart describing the growth of Verilog/SystemVerilog. The 2017 standard, reportedly did not add any new functionality to the 2012 standard. *The "+:" concept is actually listed on this chart. What is it's name?*  [Variable part select](https://www.google.com/search?q=verilog+variable+part+select&rlz=1C1CHZL_enUS735US735&oq=verilog+variable+part+select)
 
 *Given that it is part of the older Verilog standard before it merged with SystemVerilog, how confident are you now that it should work?* 100%
 
@@ -189,15 +189,15 @@ The trick is going to be splitting the BCD group into an associated 4 bit group.
 
 Hex is a more compacted way of storing a number. BCD takes Hex and spreads it out over more digits.  These screenshots of a Windows computer calculator in programming mode illustrate this. This first one maxes out 32  bits hex. This is 4Gig of bits. It would require 10 sevenSegDisplays. 
 
-![1550060430510](1550060430510.png)
+![1550060430510](./assets/1550060430510.png)
 
 This next one would require 9 sevenSegDisplays. The Hex value looks random or arbitrary.
 
-![1550060478999](1550060478999.png)
+![1550060478999](./assets/1550060478999.png)
 
 This requires 8 sevenSegDisplays. So our maximum Hex input is 28 bits. The result will be BCD 32 bits. 
 
-![1550060559247](1550060559247.png)
+![1550060559247](./assets/1550060559247.png)
 
 We could make the 2 Hex values or 8 bits changeable. Perhaps 9F at the end. This way there would be 10 values that would change the BCD output and 6 values that would cause an overflow. Can we add code to detect an overflow? Would have to capture MSB value of a 1 before a left shift, capture it in a reg and attach it to an LED. 
 
@@ -225,21 +225,21 @@ Prompts
 
 #### Verilog Code 
 
-![1550222466504](1550222466504.png)
+![1550222466504](./assets/1550222466504.png)
 
 #### RTL Schematic Screen shot 
 
-![1550222288180](1550222288180.png)
+![1550222288180](./assets/1550222288180.png)
 
 #### Synthesis Schematic Screen shot
 
-![1550223023970](1550223023970.png)
+![1550223023970](./assets/1550223023970.png)
 
 #### Implementation Device screen shot zoomed in on something interesting
 
 Can see flip flop being used for the first time:
 
-![1550222839712](1550222839712.png)
+![1550222839712](./assets/1550222839712.png)
 
 #### Testing
 
@@ -267,15 +267,15 @@ This is working! Goal is to figure out how to use it in future labs.
 
 #### Verilog Code
 
-![1550262534509](1550262534509.png)
+![1550262534509](./assets/1550262534509.png)
 
 #### RTL Schematic Screen shot 
 
-![1550261669602](1550261669602.png)
+![1550261669602](./assets/1550261669602.png)
 
 #### Synthesis Schematic Screen shot
 
-![1550261786527](1550261786527.png)
+![1550261786527](./assets/1550261786527.png)
 
 #### Implementation Device screen shot zoomed in on something interesting
 
@@ -283,11 +283,11 @@ This is working! Goal is to figure out how to use it in future labs.
 
  Lots of stuff going on
 
-![1550262021286](1550262021286.png)
+![1550262021286](./assets/1550262021286.png)
 
 Lot more flip flops being used to count, remember things.
 
-![1550262335962](1550262335962.png)
+![1550262335962](./assets/1550262335962.png)
 
 ------
 
@@ -303,13 +303,11 @@ Switches 0 through 2 control the decimal place.
 
 *What does the utilization report look like?*
 
-![1550263073845](1550263073845.png)
+![1550263073845](./assets/1550263073845.png)
 
 *Which* *counter would you delete if another program was controlling the number to be displayed? Cut and paste a picture of the code that would be deleted in order to do this.*
 
-![1550263932331](1550263932331.png)
-
-
+![1550263932331](./assets/1550263932331.png)
 
 *What 32 bit variable name that you would add as an input to this module, and connect it to a top level with something to display? (Hint right now it is seeded with a constant.)* c_input
 

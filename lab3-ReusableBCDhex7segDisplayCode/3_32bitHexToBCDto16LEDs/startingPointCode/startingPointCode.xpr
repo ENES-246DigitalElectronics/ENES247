@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="39" Path="C:/Users/SET253-17U.HCCMAIN/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/3_32bitHexToBCDto16LEDs/startingPointCode/startingPointCode.xpr">
+<Project Version="7" Minor="39" Path="C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/3_32bitHexToBCDto16LEDs/startingPointCode/startingPointCode.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="eaae020aa34a4b6bb98f6cc30c69631c"/>
