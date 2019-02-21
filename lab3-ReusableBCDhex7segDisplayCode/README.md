@@ -83,7 +83,7 @@ The Nexys4DDR goes at 100,000,000 cycles per second. FFFF FFFF bits HEX  is  4,2
 
 ## 2_bitSlicing
 
-The goal  is to find a way to grab 4 bits out a group of 32 in a single line of code.  This technique is called bit slicing.  This is similar to slicing up a string or an array in other languages. 
+The goal  is to find a way to grab 4 bits out a group of 32 in a single line of code.  This technique is called bit slicing.  This is similar to slice or split in other languages.  
 
 #### Port Diagram
 
