@@ -50,9 +50,9 @@ This code tests the ability to count clock pulses and display 32 bits split into
 
 #### Verilog Code
 
-#### ![1550065113070](1550065113070.png)
+#### ![1550065113070](assets/1550065113070.png)
 
-#### RTL Schematic Screen shot![1550065060021](1550065060021.png)
+#### RTL Schematic Screen shot![1550065060021](assets/1550065060021.png)
 
 #### Synthesis Schematic Screen shot
 
@@ -150,11 +150,12 @@ The 2017 standard, reportedly did not add any new functionality to the 2012 stan
 
 ## Design Flow: 
 
-Starting point is this [algorithm](https://pubweb.eng.utah.edu/~nmcdonal/Tutorials/BCDTutorial/BCDConversion.html). 
+Starting point is this [algorithm](https://pubweb.eng.utah.edu/~nmcdonal/Tutorials/BCDTutorial/BCDConversion.html).  This is tested in the StartingPoint project. 
 
 ### Outlining the starting point algorithm:
 
-​	Create 4 bit registers for the BCD output called 100s, 10s, 1s for a total of 12 bits
+Create 4 bit registers for the BCD output called 100s, 10s, 1s for a total of 12 bits.
+
 ​	Hook up 8 switches to 8 input bits named binary (HEX)
 ​	Hook up the BCD groups of four bits to LEDs
 
@@ -169,9 +170,10 @@ Starting point is this [algorithm](https://pubweb.eng.utah.edu/~nmcdonal/Tutoria
 
 ### Outlining an Extended Algorithm:
 
-This code is going to get long and ugly. More mistakes. Harder to read, less sustainable (other engineers can grow it to handle more bits, other engineers can fix it if the verilog code is no longer supported)
+There are two approaches, adding Thousands, Ten_Thousands, Hundred_ Thousands, Millions, etc. 
 
- Here is outline of the code
+A second approach is to nest  one for loop inside another. There is no reason this could not be done. The result would be the same combinational circuit.  The code may be harder to understand 
+Here is outline of the code
 
 So make BCD one 32 bit integer, initially 0.
 
@@ -187,7 +189,7 @@ The trick is going to be splitting the BCD group into an associated 4 bit group.
 
 ### Testing the Extended Algorithm:
 
-Hex is a more compacted way of storing a number. BCD takes Hex and spreads it out over more digits.  These screenshots of a Windows computer calculator in programming mode illustrate this. This first one maxes out 32  bits hex. This is 4Gig of bits. It would require 10 sevenSegDisplays. 
+Hex is a more compacted way of storing a number. BCD takes Hex and spreads it out over more digits.  These screenshots of a Windows computer calculator in programming mode illustrate this. This first one maxes out 32  bits hex.  It would require 10 sevenSegDisplays to display BCD.
 
 ![1550060430510](./assets/1550060430510.png)
 
@@ -198,8 +200,6 @@ This next one would require 9 sevenSegDisplays. The Hex value looks random or ar
 This requires 8 sevenSegDisplays. So our maximum Hex input is 28 bits. The result will be BCD 32 bits. 
 
 ![1550060559247](./assets/1550060559247.png)
-
-We could make the 2 Hex values or 8 bits changeable. Perhaps 9F at the end. This way there would be 10 values that would change the BCD output and 6 values that would cause an overflow. Can we add code to detect an overflow? Would have to capture MSB value of a 1 before a left shift, capture it in a reg and attach it to an LED. 
 
 Test the starting point code, and then write the extended code and document it here. 
 
@@ -242,6 +242,8 @@ Can see flip flop being used for the first time:
 ![1550222839712](./assets/1550222839712.png)
 
 #### Testing
+
+All can do is watch it count or reset.
 
 ---
 
@@ -323,9 +325,7 @@ Add your 32bitHextoBCD code to the above project. Replace any of the modules tha
 
 #### Port Diagram
 
-The SVG file called Port7Seg.svg can be uploaded to draw.io to edit. 
-
-#### Verilog Code
+Verilog Code![Port7SegBCD](assets/Port7SegBCD.svg)
 
 This is the top level module.
 
@@ -380,4 +380,8 @@ The roll over is in hex, not BCD. This means that when the hex rolls over, the B
 Add another input to the top level module to switch to 60, 60, 60, hundredths .. for a stop watch.  
 
 There are colon segments in the displays that may be connected to the FPGA, but not documented in the XCD file. First see if they light up with a power supply.  Use a Nexys 4 DDR board that is partially working for this. Chase some traces with ohm meter.
+
+Rewrite BCD module in nested for loops and add to the top level module. 
+
+
 
