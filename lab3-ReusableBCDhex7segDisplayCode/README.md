@@ -124,7 +124,7 @@ In the SystemVerilog standard [IEEE_Std1800-2017](https://github.com/ENES-246Dig
 7. Aggregate data types
    7.4 Packed and unpacked arrays
    7.4.3 Operations on arrays
-   	— Reading and writing a variable slice of the array, e.g., A[x+:c] = B[y+:c]
+   ​	— Reading and writing a variable slice of the array, e.g., A[x+:c] = B[y+:c]
 
 Suppose this test didn't work. You would then go to the Xilinx's reference called [ug901-vivado-synthesis.pdf](https://github.com/ENES-246DigitalElectronics/ENES247/blob/master/ug901-vivado-synthesis.pdf) which is randomly updated.  *What page is "+:" found  that is not in the middle of code and how is it described?* 
 
@@ -178,10 +178,10 @@ Here is outline of the code
 So make BCD one 32 bit integer, initially 0.
 
 For each bit in HEX
-	For each 7seg display (8 in our case)
-		Split the BCD into an associated 4 bit group
-		Add 3 to the group if larger or equal to 5
-	Shift entire BDC left, putting Hex bit in the LSB of BCD
+​	For each 7seg display (8 in our case)
+​		Split the BCD into an associated 4 bit group
+​		Add 3 to the group if larger or equal to 5
+​	Shift entire BDC left, putting Hex bit in the LSB of BCD
 
 So the big difference in this extended algorithm is taking the repeating pattern in the starting code and nesting it in a for loop within a for loop. 
 
@@ -385,3 +385,6 @@ Rewrite BCD module in nested for loops and add to the top level module.
 
 
 
+## 7_32bitsHexBCDdata_path
+
+This lab is working perfectly. Has the first next step done in it. 
