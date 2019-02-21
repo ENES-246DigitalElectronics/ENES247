@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sun Feb 17 15:08:47 2019
-# Process ID: 12004
+# Start of session at: Thu Feb 21 06:22:55 2019
+# Process ID: 14844
 # Current directory: C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/6_32bitsHexOrBCDTo7seg/thirtyTwoBitsHexTo7segAnd16LEDs.runs/impl_1
 # Command line: vivado.exe -log thirtyTwobitHexTo16LEDs.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source thirtyTwobitHexTo16LEDs.tcl -notrace
 # Log file: C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/6_32bitsHexOrBCDTo7seg/thirtyTwoBitsHexTo7segAnd16LEDs.runs/impl_1/thirtyTwobitHexTo16LEDs.vdi

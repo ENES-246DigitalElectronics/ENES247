@@ -263,7 +263,7 @@ Suppose that someone complains that the 7seg (or LED) displays are too dim or va
 
 This is working! Goal is to figure out how to use it in future labs.
 
-#### Port Diagram![Port7Seg](Port7Seg.svg)
+#### Port Diagram![Port7Seg](assets/Port7Seg.svg)
 
 #### Verilog Code
 
@@ -278,8 +278,6 @@ This is working! Goal is to figure out how to use it in future labs.
 ![1550261786527](./assets/1550261786527.png)
 
 #### Implementation Device screen shot zoomed in on something interesting
-
-#### 
 
  Lots of stuff going on
 
@@ -329,16 +327,57 @@ The SVG file called Port7Seg.svg can be uploaded to draw.io to edit.
 
 #### Verilog Code
 
+This is the top level module.
+
+![1550747995650](assets/1550747995650.png)
+
+This is Binary to BCD module.
+
+![1550747684502](assets/1550747684502.png)
+
 #### RTL Schematic Screen shot
+
+![1550746132360](assets/1550746132360.png)
 
 #### Synthesis Schematic Screen shot
 
+![1550746205625](assets/1550746205625.png)
+
 #### Implementation Device screen shot zoomed in on something interesting
+
+![1550748398135](assets/1550748398135.png)
+
+Still using less than 1% of the FPGA resources. 
+
+This is getting increasingly useless. It is good for looking at data_paths, but not control_paths. Need to start looking at timing diagrams. 
+
+It is beyond the scope of this class to look at a timing report.
+
+![1550748633841](assets/1550748633841.png)
 
 #### Testing
 
- 
+Turn it on and it starts counting. Right 3 switches control decimal place. Left three switches from left to right control pause, reset and binary/BCD switch. Is display upper 16 of both binary and BCD.  Bits 27:0 of the binary are turned into 31:0 of BCD. It is hard to relate them when looking at the upper 16 bits of each.
+
+Can tell that the middle segments count a bit faster in BCD because the center of the display is shift right to where the binary is counting more quickly one segment.
+
+Switching back and for, can see that the same underlying number being counted is used in both displays.  
 
 ------
 
 #### Prompts
+
+*What are some next steps?*
+
+The LEDs are glowing a little bit like intermediate calculations of the HEX_BCD module are leaking onto the display. This will happen if o_DV causes the top level module to look at more than just the results of the HEX-BCD module. It looks like the LED's turn on faster than the segments because they are black. Does the same top level module code drive them both?   A timing diagram of the control_Paths in the top level module needs to be examined.  Suggest start with ASMD chart of the top level module.  
+
+The leading segments need to be blanked rather than display 0 .. depending upon where the decimal is placed. 
+
+Roll over at the top is working in HEX. Appears to work in BCD. To build confidence, need to be able to switch to the lower bits and slow the counting way down. This probably the only time can visually check whether the HEX is being translated to BCD. 
+
+The roll over is in hex, not BCD. This means that when the hex rolls over, the BCD will stop at some place and randomly starting over again at 0. Most of the time never see this because BCD rolls over 16 times as HEX counts through 4 extra top bits. But the last time HEX rolls over, BCD might stop and roll over at a lower number. This will not happen if HEX rolls over through hex FFFFFFFF, but any other number it rolls over at will cause this glitch in the BCD. 
+
+Add another input to the top level module to switch to 60, 60, 60, hundredths .. for a stop watch.  
+
+There are colon segments in the displays that may be connected to the FPGA, but not documented in the XCD file. First see if they light up with a power supply.  Use a Nexys 4 DDR board that is partially working for this. Chase some traces with ohm meter.
+

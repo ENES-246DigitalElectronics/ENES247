@@ -1,6 +1,9 @@
 
+
 // from https://www.nandland.com/vhdl/modules/double-dabble.html
- module Binary_to_BCD
+module Binary_to_BCD
+
+//---------------------------------------------------------------         
   #(parameter INPUT_WIDTH = 28,
     parameter DECIMAL_DIGITS = 8,
     parameter s_IDLE              = 3'b000,
@@ -10,15 +13,18 @@
     parameter s_CHECK_DIGIT_INDEX = 3'b100,
     parameter s_BCD_DONE          = 3'b101
     )
+    
+//---------------------------------------------------------------         
   (
-   input                         clk, // this automatic, not manual
-   input [INPUT_WIDTH-1:0]       i_Binary, // seven switches on the right of the board .. input hex
-   input                         i_Start, // sw on far left that starts the calculation after hex is entered
+   input                         clk, // this is manual
+   input [INPUT_WIDTH-1:0]       i_Binary, // seven switches on the right 
+   input                         i_Start, // sw on far left that starts 
    output [DECIMAL_DIGITS*4-1:0] o_BCD, // LED 7:0 on the right
-   output                        o_DV   // this is done
+   output                        o_DV   // LED 15 is the Done Vector
    );
-   
-  reg [2:0] r_SM_Main = s_IDLE;
+      
+ //---------------------------------------------------------------         
+ reg [2:0] r_SM_Main = s_IDLE;
    
   // The vector that contains the output BCD
   reg [DECIMAL_DIGITS*4-1:0] r_BCD = 0;
@@ -35,13 +41,13 @@
  
   wire [3:0]                 w_BCD_Digit;
   reg                        r_DV = 1'b0;                       
-    
+ 
+ //---------------------------------------------------------------           
   always @(posedge clk)
     begin
- 
       case (r_SM_Main) 
   
-        // Stay in this state until i_Start comes along
+//------- Stay in this state until i_Start comes along
         s_IDLE :
           begin
             r_DV <= 1'b0;
@@ -55,9 +61,8 @@
             else
               r_SM_Main <= s_IDLE;
           end
-                 
   
-        // Always shift the BCD Vector until we have shifted all bits through
+//------Always shift the BCD Vector until we have shifted all bits through
         // Shift the most significant bit of r_Binary into r_BCD lowest bit.
         s_SHIFT :
           begin
@@ -66,9 +71,8 @@
             r_Binary  <= r_Binary << 1;
             r_SM_Main <= s_CHECK_SHIFT_INDEX;
           end          
-         
   
-        // Check if we are done with shifting in r_Binary vector
+//---------------Check if we are done with shifting in r_Binary vector
         s_CHECK_SHIFT_INDEX :
           begin
             if (r_Loop_Count == INPUT_WIDTH-1)
@@ -83,8 +87,7 @@
               end
           end
                  
-  
-        // Break down each BCD Digit individually.  Check them one-by-one to
+// ------ Break down each BCD Digit individually.  Check them one-by-one to
         // see if they are greater than 4.  If they are, increment by 3.
         // Put the result back into r_BCD Vector.  
         s_ADD :
@@ -97,8 +100,7 @@
             r_SM_Main <= s_CHECK_DIGIT_INDEX; 
           end       
          
-         
-        // Check if we are done incrementing all of the BCD Digits
+ //-------------Check if we are done incrementing all of the BCD Digits
         s_CHECK_DIGIT_INDEX :
           begin
             if (r_Digit_Index == DECIMAL_DIGITS-1)
@@ -112,23 +114,22 @@
                 r_SM_Main     <= s_ADD;
               end
           end
-         
   
-  
+//---------------------------------------------------------------         
         s_BCD_DONE :
           begin
             r_DV      <= 1'b1;
             r_SM_Main <= s_IDLE;
           end
          
-         
+//---------------------------------------------------------------         
         default :
           r_SM_Main <= s_IDLE;
             
       endcase
     end // always @ (posedge clk)  
  
-   
+//---------------------------------------------------------------         
   assign w_BCD_Digit = r_BCD[r_Digit_Index*4 +: 4];
        
   assign o_BCD = r_BCD;
