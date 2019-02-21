@@ -1,6 +1,6 @@
 ## 1Lut_Mux
 
-One goal might be to use the primitives within the FPGA CLB. Chapter 3 of the Vivado 7 Series Libraries  lists off the primitives. Chapter 4 describes how to implement them using VHDL and Verilog. Explore the LUT and MUX in this project. 
+One goal might be to use the primitives within the FPGA CLB. Chapter 3 of the [Vivado 7 Series Libraries](https://github.com/ENES-246DigitalElectronics/ENES247/blob/master/ug953-vivado-7series-libraries.pdf)  lists off the primitives. Chapter 4 describes how to implement them using VHDL and Verilog. Explore the LUT and MUX in this project. 
 
 #### Port Diagram
 
