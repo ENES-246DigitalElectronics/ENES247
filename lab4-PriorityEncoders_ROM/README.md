@@ -118,8 +118,6 @@ It is a tricky, logic problem. Look at the first two rows of the truth table bel
 
 ![img](table4.JPG)
 
-There four vivado projects. There are three different verilog expressions introduced. The first synthesizeable verilog code has been introduced. Do one port interface diagram. Do four Verilog code screen shots and four screen shots of everything else. The goal is to compare them.  Just describe how the three test below.
-
 #### Port Diagram
 
 #### Verilog Code
@@ -134,7 +132,7 @@ There four vivado projects. There are three different verilog expressions introd
 
 
 
----
+___
 
 #### Prompts
 
@@ -161,8 +159,6 @@ There four vivado projects. There are three different verilog expressions introd
 *We have been told that implementation within the FGPA doesn't matter from a net and leaf cell count point of view. We don't see obvious controls that specify where within the chip everything is implemented. (It looks like resources next to the switch and LED pads are being used constantly.) But real quick in the future, speed is going to matter. Which of these priority encoder looks like it will be the fastest?*
 
 *Why is speed not important to us right now?*
-
-*Why is the for loop called [One-Hot](https://en.wikipedia.org/wiki/One-hot)?* 
 
 An alternative to if, if, if, if, if, ... if else is a case command. Both Case and If else Case command syntax was part of verilog.  This is why it is called "data_path". *Why do you think the if if if ...if else command introduced with System Verilog?* 
 
