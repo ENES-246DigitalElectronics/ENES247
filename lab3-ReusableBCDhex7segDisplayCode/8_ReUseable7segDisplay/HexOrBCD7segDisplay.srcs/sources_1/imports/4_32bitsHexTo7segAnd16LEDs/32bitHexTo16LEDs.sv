@@ -5,10 +5,9 @@ module thirtyTwobitHexTo16LEDs(
     input reset, // starts counters over again at 1
     input hexBCD, // switches from displaying 32 bits of hex to displaying 28 bits of hex converted to 32 bits BCD 
     input bankSwitch, //switches LED's to lower 16 and slows down the counting
-    input zeroDisplay, //turn on leading zeros
     input [2:0] dp_selector, // decimal place selector
     output reg dp, // decimal place red light dot on the 7 segment displays
-    output reg [7:0] anodes, //on off buttons for each of the 7 segment displays
+    output [7:0] anodes, //on off buttons for each of the 7 segment displays
     output a,b,c,d,e,f,g, // red led's on the seven segment displays
     output reg [15:0] LED // LEDs above the switches
     );
@@ -22,7 +21,7 @@ module thirtyTwobitHexTo16LEDs(
     integer count_clk = 0; //this is the counter to be displayed by the 7 seg display
     integer anode_clk = 0; //this is the clock that is to cause a 3 bit counter to to change 50 times a second
     
-   
+    reg [2:0] segment = 0; //this is what chooses what is displayed on which segment 
     integer c_input=451263789; //this creates a variable called c_input with 32 bits that has 1 added to it by a clock
               //in hex is 1AE5 BD2D
               //in decimal is 451,263,789
@@ -45,43 +44,24 @@ module thirtyTwobitHexTo16LEDs(
         else count_clk <= count_clk;
     end
     //second clock controlling how fast the 8 displays are turned on one at a time, too fast grow dim, too slow they flicker      
-    reg [2:0] segment = 0; //which particular segment working on .. is determined by this anode clock  
     always_ff @ (posedge(clk), posedge(reset))
     begin
         if (reset == 1) anode_clk <=0 ;
-        else if (anode_clk >= divider_anode-1) begin
+        else if (anode_clk == divider_anode-1) begin
             anode_clk <=0 ;
             if ((segment+1)==dp_selector) dp<=0; else dp<=1; // had to fiddle with this code, no idea why it works this way
             segment <= segment+1;
         end         
         else anode_clk<=anode_clk + 1;
     end
- 
-    reg nanode; //not anodes, 0 means don't display because is a leading zero
-    integer anodeBlank; // contains 32 bits of either HEX binary or BCD binary
-    reg [31:0] BCD; //contains BCD binary 
-    reg [2:0] i_anodeBlank_count; // increments a for loop from left to right
-    reg bigger_than_zero_found_flag; //when going through binary, MSB to LSB, turn flag on when see first non-zero
-    //blank lead zeros    
-    always_comb begin
-            nanode=0; //means don't display
-            //determine which output to look at for leading zeros
-            if (hexBCD) anodeBlank = BCD; //depends upon if looking at binary or Hex
-            else anodeBlank = c_input;
-            //go through four bit combinations, upto and including segment interested in
-            bigger_than_zero_found_flag = 0;
-            for (i_anodeBlank_count = 7; i_anodeBlank_count >=segment; i_anodeBlank_count = i_anodeBlank_count - 1) 
-                if (!anodeBlank[4*segment +: 4]==0 && bigger_than_zero_found_flag == 0) nanode =1; else bigger_than_zero_found_flag = 1;
-                // which means display                     
-    end
-      
-    //anode expansion   
-    always_comb if (nanode) anodes = ~(1 << segment); else anodes=8'hFF; // is a decoder .. anode_select 3 bits could be 0,1,2,3,4,5,6,7 ..     
+    
+    //anode expansion
+    wire nanodes; //not anodes
+    assign anodes = ~(1 << segment); // is a decoder .. anode_select 3 bits could be 0,1,2,3,4,5,6,7 ..     
     
     //hex selector
     reg [3:0] hex_to_display; 
-    
-    //assign hex_to_display = c_input[4*segment +: 4]; // 3 bits of anode_select, grab 4 bits of c_input and put them in hex_to_display
+    reg [31:0] BCD;
     always_comb begin // this switches between Hex and BCD depending upon switch position
         if (hexBCD) begin
             hex_to_display = BCD[4*segment +: 4];
@@ -117,7 +97,6 @@ module thirtyTwobitHexTo16LEDs(
             BCD[0] = c_input[i];
         end
     end
-     
-  
+        
 endmodule
 

@@ -1,0 +1,559 @@
+/*
+
+Xilinx Vivado v2018.3 (64-bit) [Major: 2018, Minor: 3]
+SW Build: 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+
+Process ID (PID): 14372
+License: Customer
+
+Current time: 	Fri Feb 22 06:22:03 EST 2019
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 14 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.3/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2018.3/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	FoersterGame
+User home directory: C:/Users/FoersterGame
+User working directory: C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/7_32bitsHexBDCdata_Path
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.3
+RDI_DATADIR: C:/Xilinx/Vivado/2018.3/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.3/bin
+
+Vivado preferences file location: C:/Users/FoersterGame/AppData/Roaming/Xilinx/Vivado/2018.3/vivado.xml
+Vivado preferences directory: C:/Users/FoersterGame/AppData/Roaming/Xilinx/Vivado/2018.3/
+Vivado layouts directory: C:/Users/FoersterGame/AppData/Roaming/Xilinx/Vivado/2018.3/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.3/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/7_32bitsHexBDCdata_Path/vivado.log
+Vivado journal file location: 	C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/7_32bitsHexBDCdata_Path/vivado.jou
+Engine tmp dir: 	C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/7_32bitsHexBDCdata_Path/.Xil/Vivado-14372-DESKTOP-KB2R4MG
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.3
+XILINX_SDK: C:/Xilinx/SDK/2018.3
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.3
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.3
+
+
+GUI allocated memory:	185 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 689 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bx (cp):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\FoersterGame\Documents\GitHub\ENES247\lab3-ReusableBCDhex7segDisplayCode\7_32bitsHexBDCdata_Path\HexOrBCD7segDisplay.xpr. Version: Vivado v2018.3 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/7_32bitsHexBDCdata_Path/HexOrBCD7segDisplay.xpr 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/7_32bitsHexBDCdata_Path' 
+// Tcl Message: open_project C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/7_32bitsHexBDCdata_Path/HexOrBCD7segDisplay.xpr 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/7_32bitsHexBDCdata_Path' INFO: [Project 1-313] Project file moved from 'C:/Users/Scott Foerster/Documents/GitHub/ENES246/-7ControlPath/4_HexOrBCD7segDisplay/HexOrBCD7segDisplay' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.3/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 71 MB (+71581kb) [00:00:06]
+// [Engine Memory]: 638 MB (+517552kb) [00:00:06]
+// [GUI Memory]: 86 MB (+11981kb) [00:00:06]
+// [GUI Memory]: 106 MB (+16979kb) [00:00:06]
+// [Engine Memory]: 678 MB (+8752kb) [00:00:06]
+// WARNING: HEventQueue.dispatchEvent() is taking  1925 ms.
+// Project name: HexOrBCD7segDisplay; location: C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/7_32bitsHexBDCdata_Path; part: xc7a100tcsg324-1
+// [GUI Memory]: 116 MB (+5083kb) [00:00:08]
+dismissDialog("Open Project"); // bx (cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 704 MB. GUI used memory: 63 MB. Current time: 2/22/19, 6:22:04 AM EST
+// [Engine Memory]: 736 MB (+24978kb) [00:00:08]
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 27 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, thirtyTwobitHexTo16LEDs (32bitHexTo16LEDs.sv)]", 1, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, thirtyTwobitHexTo16LEDs (32bitHexTo16LEDs.sv)]", 1, false, false, false, false, false, true); // B (D, cp) - Double Click
+selectCodeEditor("32bitHexTo16LEDs.sv", 574, 109); // cl (w, cp)
+// Elapsed time: 21 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 148, 325); // cl (w, cp)
+// Elapsed time: 40 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 119, 174); // cl (w, cp)
+// Elapsed time: 31 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 64, 245); // cl (w, cp)
+// Elapsed time: 10 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 54, 241); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 54, 244); // cl (w, cp)
+// Elapsed time: 31 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 121, 180); // cl (w, cp)
+// Elapsed time: 57 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 28, 366); // cl (w, cp)
+// Elapsed time: 18 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 5, 360); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 0, 364); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 0, 364); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'c'); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 3, 195); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'v'); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 3, 195); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 0, 200); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 124, 402); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 42, 432); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 31, 432); // cl (w, cp)
+// Elapsed time: 38 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 220, 176); // cl (w, cp)
+// Elapsed time: 117 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 211, 246); // cl (w, cp)
+// Elapsed time: 57 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 163, 231); // cl (w, cp)
+// Elapsed time: 19 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 101, 245); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 57, 244); // cl (w, cp)
+// Elapsed time: 76 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 99, 247); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 128, 282); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 69, 264); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 69, 264); // cl (w, cp)
+// Elapsed time: 13 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 68, 263); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 72, 284); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 64, 300); // cl (w, cp)
+// Elapsed time: 15 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 120, 181); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 150, 377); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 117, 174); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 78, 178); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'v'); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 119, 258); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 34, 432); // cl (w, cp)
+// Elapsed time: 19 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 212, 401); // cl (w, cp)
+// Elapsed time: 13 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 237, 432); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 34, 230); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'v'); // cl (w, cp)
+// Elapsed time: 50 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 32, 178); // cl (w, cp)
+// Elapsed time: 13 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 75, 127); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 114, 127); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 41, 159); // cl (w, cp)
+// Elapsed time: 21 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Nexys4DDR_Master.xdc]", 4, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Nexys4DDR_Master.xdc]", 4, false, false, false, false, false, true); // B (D, cp) - Double Click
+selectCodeEditor("Nexys4DDR_Master.xdc", 525, 367); // cl (w, cp)
+typeControlKey((HResource) null, "Nexys4DDR_Master.xdc", 'v'); // cl (w, cp)
+typeControlKey(null, null, 'z');
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "32bitHexTo16LEDs.sv", 1); // k (j, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 71, 79); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'c'); // cl (w, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Nexys4DDR_Master.xdc", 2); // k (j, cp)
+selectCodeEditor("Nexys4DDR_Master.xdc", 526, 366); // cl (w, cp)
+typeControlKey((HResource) null, "Nexys4DDR_Master.xdc", 'v'); // cl (w, cp)
+selectCodeEditor("Nexys4DDR_Master.xdc", 8, 366); // cl (w, cp)
+selectCodeEditor("Nexys4DDR_Master.xdc", 92, 458); // cl (w, cp)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cp)
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "32bitHexTo16LEDs.sv", 1); // k (j, cp)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 123 MB (+839kb) [00:14:17]
+selectCodeEditor("32bitHexTo16LEDs.sv", 25, 408); // cl (w, cp)
+// Elapsed time: 10 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 72, 125); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'c'); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 117, 369); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 83, 423); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 78, 419); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'v'); // cl (w, cp)
+// Elapsed time: 93 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 150, 103); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 78, 109); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 112, 170); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 26, 230); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 128, 230); // cl (w, cp)
+// Elapsed time: 13 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 22, 230); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 173, 75); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'v'); // cl (w, cp)
+// Elapsed time: 11 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 234, 134); // cl (w, cp)
+// Elapsed time: 77 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 54, 437); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'c'); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 84, 171); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'v'); // cl (w, cp)
+// Elapsed time: 133 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 615, 195); // cl (w, cp)
+// Elapsed time: 73 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 168, 244); // cl (w, cp)
+// Elapsed time: 99 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 87, 126); // cl (w, cp)
+// Elapsed time: 61 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 282, 76); // cl (w, cp)
+// Elapsed time: 111 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 179, 350); // cl (w, cp)
+// Elapsed time: 70 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 271, 218); // cl (w, cp)
+// Elapsed time: 10 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 136, 449); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 136, 449); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 41, 110); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'v'); // cl (w, cp)
+// Elapsed time: 18 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 26, 301); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 0, 295); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 0, 295); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 171, 115); // cl (w, cp)
+// Elapsed time: 18 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 133, 193); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 164, 194); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 147, 193); // cl (w, cp)
+// Elapsed time: 10 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 559, 233); // cl (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 759 MB. GUI used memory: 53 MB. Current time: 2/22/19, 6:52:04 AM EST
+// Elapsed time: 61 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 189, 368); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 132, 437); // cl (w, cp)
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 11 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 147, 300); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 147, 300); // cl (w, cp)
+// Elapsed time: 45 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 22, 279); // cl (w, cp)
+// Elapsed time: 10 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 233, 401); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'v'); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 28, 419); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 160, 401); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 25, 347); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 12, 331); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 1, 328); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'v'); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 298, 315); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 33, 239); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 53, 319); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 8, 259); // cl (w, cp)
+// Elapsed time: 46 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 631, 41); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 237, 43); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 341, 93); // cl (w, cp)
+// Elapsed time: 22 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 205, 41); // cl (w, cp)
+// Elapsed time: 32 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 567, 80); // cl (w, cp)
+// Elapsed time: 68 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 86, 276); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 50, 314); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 56, 311); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 56, 311); // cl (w, cp)
+// Elapsed time: 23 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 365, 308); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 58, 315); // cl (w, cp)
+// Elapsed time: 10 seconds
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'c'); // cl (w, cp)
+// Elapsed time: 17 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 277, 270); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 186, 278); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 176, 319); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 131, 161); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 456, 160); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 18, 144); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'v'); // cl (w, cp)
+// Elapsed time: 27 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 131, 207); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 1, 91); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 0, 98); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 0, 93); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 10, 368); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 2, 383); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'v'); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 597, 385); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 513, 451); // cl (w, cp)
+// Elapsed time: 17 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 3, 295); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'c'); // cl (w, cp)
+// Elapsed time: 17 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 84, 413); // cl (w, cp)
+// Elapsed time: 12 seconds
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'v'); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 99, 413); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 87, 415); // cl (w, cp)
+// Elapsed time: 12 seconds
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'c'); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'v'); // cl (w, cp)
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'v'); // cl (w, cp)
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'c'); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'v'); // cl (w, cp)
+// Elapsed time: 70 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 168, 345); // cl (w, cp)
+// Elapsed time: 16 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 300, 385); // cl (w, cp)
+// Elapsed time: 23 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 267, 416); // cl (w, cp)
+// Elapsed time: 11 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 111, 431); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 83, 364); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 83, 364); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'c'); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 93, 430); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'v'); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 81, 432); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 159, 433); // cl (w, cp)
+// Elapsed time: 11 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 35, 260); // cl (w, cp)
+// Elapsed time: 54 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 361, 401); // cl (w, cp)
+// Elapsed time: 32 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 27, 261); // cl (w, cp)
+// Elapsed time: 71 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 287, 262); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 504, 264); // cl (w, cp)
+// Elapsed time: 32 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 505, 266); // cl (w, cp)
+// Elapsed time: 49 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 9, 165); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 283, 279); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 773, 252); // cl (w, cp)
+// Elapsed time: 35 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 111, 437); // cl (w, cp)
+// Elapsed time: 75 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 287, 418); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'c'); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 443, 436); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'v'); // cl (w, cp)
+// Elapsed time: 45 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 354, 436); // cl (w, cp)
+// Elapsed time: 24 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 154, 481); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 122, 410); // cl (w, cp)
+// Elapsed time: 24 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 93, 217); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 33, 298); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 3, 296); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 417, 209); // cl (w, cp)
+// Elapsed time: 17 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 127, 301); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 155, 314); // cl (w, cp)
+// Elapsed time: 46 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 107, 280); // cl (w, cp)
+// Elapsed time: 60 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 174, 263); // cl (w, cp)
+// Elapsed time: 16 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 140, 264); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 187, 269); // cl (w, cp)
+// Elapsed time: 32 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 195, 265); // cl (w, cp)
+// Elapsed time: 73 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 30, 55); // cl (w, cp)
+// Elapsed time: 56 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 156, 283); // cl (w, cp)
+// Elapsed time: 10 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 166, 57); // cl (w, cp)
+// Elapsed time: 21 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 446, 194); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 56, 60); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'c'); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 86, 216); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'v'); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 202, 208); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 133, 293); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 114, 292); // cl (w, cp)
+// Elapsed time: 57 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 60, 59); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 56, 59); // cl (w, cp)
+// Elapsed time: 26 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 140, 265); // cl (w, cp)
+// Elapsed time: 22 seconds
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'c'); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'v'); // cl (w, cp)
+// Elapsed time: 22 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 189, 262); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 148, 298); // cl (w, cp)
+// Elapsed time: 50 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 140, 264); // cl (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 759 MB. GUI used memory: 49 MB. Current time: 2/22/19, 7:22:04 AM EST
+// Elapsed time: 90 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 770, 225); // cl (w, cp)
+// Elapsed time: 130 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 112, 339); // cl (w, cp)
+// Elapsed time: 15 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 2, 296); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 2, 296); // cl (w, cp)
+// Elapsed time: 10 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 43, 369); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 102, 312); // cl (w, cp)
+// Elapsed time: 37 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 782, 228); // cl (w, cp)
+// Elapsed time: 16 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 770, 230); // cl (w, cp)
+// Elapsed time: 23 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 696, 245); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 702, 245); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 195, 294); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 60, 277); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 54, 280); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 93, 323); // cl (w, cp)
+// Elapsed time: 76 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 54, 280); // cl (w, cp)
+// Elapsed time: 23 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 332, 264); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 293, 267); // cl (w, cp)
+// Elapsed time: 34 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 477, 262); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'c'); // cl (w, cp)
+// Elapsed time: 14 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 477, 269); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 475, 267); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'v'); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 632, 267); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 65, 289); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 62, 279); // cl (w, cp)
+// Elapsed time: 47 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 144, 265); // cl (w, cp)
+// Elapsed time: 128 seconds
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'v'); // cl (w, cp)
+// Elapsed time: 31 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 82, 210); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'c'); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 371, 248); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'v'); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 491, 247); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 532, 247); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 524, 247); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 370, 246); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'c'); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 528, 243); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'v'); // cl (w, cp)
+// Elapsed time: 37 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 325, 351); // cl (w, cp)
+// Elapsed time: 31 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 419, 347); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 556, 375); // cl (w, cp)
+// Elapsed time: 100 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 421, 299); // cl (w, cp)
+// Elapsed time: 50 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 433, 329); // cl (w, cp)
+// Elapsed time: 30 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 78, 128); // cl (w, cp)
+// Elapsed time: 17 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 216, 221); // cl (w, cp)
+// Elapsed time: 70 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 4, 228); // cl (w, cp)
+// Elapsed time: 10 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 135, 229); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 135, 229); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 150, 229); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 150, 229); // cl (w, cp)
+// Elapsed time: 18 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 533, 351); // cl (w, cp)
+// Elapsed time: 188 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 130, 228); // cl (w, cp)
+// Elapsed time: 11 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 163, 227); // cl (w, cp)
+// Elapsed time: 12 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 135, 227); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 212, 230); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 247, 77); // cl (w, cp)
+// Elapsed time: 10 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 241, 77); // cl (w, cp)
+// Elapsed time: 14 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 23, 144); // cl (w, cp)
+// Elapsed time: 49 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 447, 313); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 435, 313); // cl (w, cp)
+// Elapsed time: 13 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 447, 434); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 456, 471); // cl (w, cp)
+// Elapsed time: 39 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 685, 451); // cl (w, cp)
+// Elapsed time: 44 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 174, 398); // cl (w, cp)
+// Elapsed time: 63 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 535, 449); // cl (w, cp)
+// Elapsed time: 63 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 54, 210); // cl (w, cp)
+selectCodeEditor("32bitHexTo16LEDs.sv", 75, 212); // cl (w, cp)
+// Elapsed time: 25 seconds
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'c'); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'v'); // cl (w, cp)
+// Elapsed time: 10 seconds
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'v'); // cl (w, cp)
+typeControlKey((HResource) null, "32bitHexTo16LEDs.sv", 'v'); // cl (w, cp)
+// Elapsed time: 23 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 139, 418); // cl (w, cp)
+// Elapsed time: 22 seconds
+selectCodeEditor("32bitHexTo16LEDs.sv", 47, 264); // cl (w, cp)
+// Elapsed time: 43 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // B (f, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design]", 15, true); // u (Q, cp) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_NETLIST_DESIGN
+// bt (cp): Synthesis is Out-of-date: addNotify
+selectButton(PAResourceQtoS.StaleRunDialog_NO, "Cancel"); // a (bt)
+// 'dQ' command handler elapsed time: 3 seconds
+dismissDialog("Synthesis is Out-of-date"); // bt (cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, RTL Analysis, Open Elaborated Design]", 12, true); // u (Q, cp) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_RTL_DESIGN
+// bx (cp):  Open Elaborated Design : addNotify
+// TclEventType: ELABORATE_START
+// Tcl Message: synth_design -rtl -name rtl_1 
+// Tcl Message: Command: synth_design -rtl -name rtl_1 Starting synth_design Using part: xc7a100tcsg324-1 Top: thirtyTwobitHexTo16LEDs 
+// HMemoryUtils.trashcanNow. Engine heap size: 887 MB. GUI used memory: 49 MB. Current time: 2/22/19, 7:51:54 AM EST
+// [Engine Memory]: 1,447 MB (+706481kb) [01:30:21]
+// Elapsed time: 108 seconds
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a (bx)
+// Elapsed time: 134 seconds
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a (bx)
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a (bx)
+// 'dQ' command handler elapsed time: 248 seconds
+closeMainWindow("HexOrBCD7segDisplay - [C:/Users/FoersterGame/Documents/GitHub/ENES247/lab3-ReusableBCDhex7segDisplayCode/7_32bitsHexBDCdata_Path/HexOrBCD7segDisplay.xpr] - Vivado 2018.3"); // cp
+// HOptionPane Warning: 'A background task is running. Please wait until it completes to exit Vivado. If you choose to abort background task and exit immediately, you will lose all unsaved changes to project. (Background Task)'
