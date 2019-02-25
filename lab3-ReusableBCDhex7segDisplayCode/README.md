@@ -369,22 +369,47 @@ Switching back and for, can see that the same underlying number being counted is
 
 *What are some next steps?*
 
-The LEDs are glowing a little bit like intermediate calculations of the HEX_BCD module are leaking onto the display. This will happen if o_DV causes the top level module to look at more than just the results of the HEX-BCD module. It looks like the LED's turn on faster than the segments because they are black. Does the same top level module code drive them both?   A timing diagram of the control_Paths in the top level module needs to be examined.  Suggest start with ASMD chart of the top level module.  
+The LEDs are glowing a little bit like intermediate calculations of the HEX_BCD module are leaking onto the display. This will happen if o_DV causes the top level module to look at more than just the results of the HEX-BCD module. It looks like the LED's turn on faster than the segments because they are black. Does the same top level module code drive them both?   A timing diagram of the control_Paths in the top level module needs to be examined.  Suggest start with ASMD chart of the top level module.  **This was fixed by doing this without a clock in a combinatory circuit in 7_32bitsHexBCDdata_path.** But do need to figure out what is wrong with the HEX-BCD clocked section in this project. Most likely the data_path needs to be pulled out of the control_path. They look mixed up right now.
 
-The leading segments need to be blanked rather than display 0 .. depending upon where the decimal is placed. 
+The leading segments need to be blanked rather than display 0 .. depending upon where the decimal is placed.  **This has been done in 8_ReUseable7segDisplay.** 
 
-Roll over at the top is working in HEX. Appears to work in BCD. To build confidence, need to be able to switch to the lower bits and slow the counting way down. This probably the only time can visually check whether the HEX is being translated to BCD. 
+Roll over at the top is working in HEX. Appears to work in BCD. To build confidence, need to be able to switch to the lower bits and slow the counting way down. This probably the only time can visually check whether the HEX is being translated to BCD.   **This has been done in 8_ReUseable7segDisplay.** Turned into a mechanism to slow down the clock so lower bit counting can be seen. 
 
-The roll over is in hex, not BCD. This means that when the hex rolls over, the BCD will stop at some place and randomly starting over again at 0. Most of the time never see this because BCD rolls over 16 times as HEX counts through 4 extra top bits. But the last time HEX rolls over, BCD might stop and roll over at a lower number. This will not happen if HEX rolls over through hex FFFFFFFF, but any other number it rolls over at will cause this glitch in the BCD. 
+The roll over is in hex, not BCD. This means that when the hex rolls over, the BCD will stop at some place and randomly starting over again at 0. Most of the time never see this because BCD rolls over 16 times as HEX counts through 4 extra top bits. But the last time HEX rolls over, BCD might stop and roll over at a lower number. This will not happen if HEX rolls over through hex FFFFFFFF, but any other number it rolls over at will cause this glitch in the BCD.  This is not a problem as long as the number of HEX bits are larger than BCD and HEX counting is not terminated before they are all filled. 
 
 Add another input to the top level module to switch to 60, 60, 60, hundredths .. for a stop watch.  
 
 There are colon segments in the displays that may be connected to the FPGA, but not documented in the XCD file. First see if they light up with a power supply.  Use a Nexys 4 DDR board that is partially working for this. Chase some traces with ohm meter.
 
-Rewrite BCD module in nested for loops and add to the top level module. 
+Add top level module counter that access the lower level module 7seg display. .  **This has been done in 8_ReUseable7segDisplay.** 
 
 
 
 ## 7_32bitsHexBCDdata_path
 
-This lab is working perfectly. Has the first next step done in it. 
+This lab is working perfectly. Fixed the 7segDisplay glowing instead of fully turning off. Did this by using a bin to BCD algorithm that could be implemented in a data_path only, combinatory way. 
+
+## 8_ReUseable7SegDisplay
+
+#### Test
+
+SW[2:0] display the decimal place correctly
+SW[15] pauses the counting
+SW[14] resets the counter to 0, again nothing to do with the 7seg display
+SW[13] hexBCD switches between display of binary in HEX and binary in BCD
+SW[12] bankSwitch is associated with the counter and is not working
+
+#### ToDo List
+
+Lots of the behavior of the counter present in 7_32bitsHexBCDdata_path was not replicated in this project. The example counter top level module needs to have the features added back in of pause, bankSwitch, reset, etc. 
+
+Another option needs to be added that supports words being input rather than binary. Would add support for this [representation of the alphabet on a 7 seg display](https://en.wikichip.org/wiki/seven-segment_display/representing_letters). Need to think about how it would be physically implemented. Can numbers be mixed with this? Could but there are 26 + 10 or 36 which is 6 bits per segment, not 4. So has to be widened to 48 bits sent to the 7seg display with some of the most significant bits turning into letters. Some design is needed here. Zero blanking may need to be turned off. Would need to write a top level module that shows how to use it in this mode.
+
+
+
+
+
+
+
+
+
