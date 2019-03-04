@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sat Mar  2 12:20:36 2019
+| Date         : Sun Mar  3 12:49:51 2019
 | Host         : DESKTOP-KB2R4MG running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Counter_methodology_drc_routed.rpt -pb Counter_methodology_drc_routed.pb -rpx Counter_methodology_drc_routed.rpx
 | Design       : Counter
@@ -23,12 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 103
+             Violations found: 100
 +-----------+----------+-----------------------------+------------+
 | Rule      | Severity | Description                 | Violations |
 +-----------+----------+-----------------------------+------------+
 | TIMING-17 | Warning  | Non-clocked sequential cell | 100        |
-| TIMING-20 | Warning  | Non-clocked latch           | 3          |
 +-----------+----------+-----------------------------+------------+
 
 2. REPORT DETAILS
@@ -531,21 +530,6 @@ Related violations: <none>
 TIMING-17#100 Warning
 Non-clocked sequential cell  
 The clock pin instanciation/segment_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#1 Warning
-Non-clocked latch  
-The latch instanciation/abc_reg[0] cannot be properly analyzed as its control pin instanciation/abc_reg[0]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#2 Warning
-Non-clocked latch  
-The latch instanciation/abc_reg[1] cannot be properly analyzed as its control pin instanciation/abc_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#3 Warning
-Non-clocked latch  
-The latch instanciation/abc_reg[2] cannot be properly analyzed as its control pin instanciation/abc_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 

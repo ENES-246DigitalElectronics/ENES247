@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Sat Mar  2 12:20:36 2019
+| Date             : Sun Mar  3 12:49:51 2019
 | Host             : DESKTOP-KB2R4MG running 64-bit major release  (build 9200)
 | Command          : report_power -file Counter_power_routed.rpt -pb Counter_power_summary_routed.pb -rpx Counter_power_routed.rpx
 | Design           : Counter
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 75.240 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 71.831 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 74.443                           |
+| Dynamic (W)              | 71.035                           |
 | Device Static (W)        | 0.797                            |
 | Effective TJA (C/W)      | 4.6                              |
 | Max Ambient (C)          | 0.0                              |
@@ -52,17 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |    18.882 |      655 |       --- |             --- |
-|   LUT as Logic |    18.782 |      409 |     63400 |            0.65 |
+| Slice Logic    |    16.604 |      654 |       --- |             --- |
+|   LUT as Logic |    16.503 |      418 |     63400 |            0.66 |
 |   CARRY4       |     0.048 |       28 |     15850 |            0.18 |
-|   Register     |     0.028 |      103 |    126800 |            0.08 |
-|   F7/F8 Muxes  |     0.018 |       15 |     63400 |            0.02 |
+|   Register     |     0.028 |      100 |    126800 |            0.08 |
+|   F7/F8 Muxes  |     0.020 |       17 |     63400 |            0.03 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |        6 |       --- |             --- |
-| Signals        |    14.109 |      552 |       --- |             --- |
-| I/O            |    41.452 |       40 |       210 |           19.05 |
+|   Others       |     0.000 |        4 |       --- |             --- |
+| Signals        |    12.933 |      551 |       --- |             --- |
+| I/O            |    41.497 |       40 |       210 |           19.05 |
 | Static Power   |     0.797 |          |           |                 |
-| Total          |    75.240 |          |           |                 |
+| Total          |    71.831 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,9 +72,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |    33.578 |      33.015 |      0.563 |
-| Vccaux    |       1.800 |     1.611 |       1.518 |      0.093 |
-| Vcco33    |       3.300 |    11.730 |      11.726 |      0.004 |
+| Vccint    |       1.000 |    30.125 |      29.562 |      0.563 |
+| Vccaux    |       1.800 |     1.613 |       1.520 |      0.093 |
+| Vcco33    |       3.300 |    11.743 |      11.739 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -139,8 +139,8 @@ Table of Contents
 +-----------------+-----------+
 | Name            | Power (W) |
 +-----------------+-----------+
-| Counter         |    74.443 |
-|   instanciation |    29.665 |
+| Counter         |    71.035 |
+|   instanciation |     1.414 |
 +-----------------+-----------+
 
 

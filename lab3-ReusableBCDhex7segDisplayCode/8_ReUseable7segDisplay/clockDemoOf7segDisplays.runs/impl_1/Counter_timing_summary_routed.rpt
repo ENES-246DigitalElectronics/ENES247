@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Sat Mar  2 12:20:36 2019
+| Date         : Sun Mar  3 12:49:52 2019
 | Host         : DESKTOP-KB2R4MG running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file Counter_timing_summary_routed.rpt -pb Counter_timing_summary_routed.pb -rpx Counter_timing_summary_routed.rpx -warn_on_violation
 | Design       : Counter
@@ -54,72 +54,6 @@ Table of Contents
 --------------------
  There are 100 register/latch pins with no clock driven by root clock pin: clk (HIGH)
 
- There are 3 register/latch pins with no clock driven by root clock pin: hexBCD (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[0]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[10]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[11]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[12]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[13]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[14]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[15]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[16]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[17]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[18]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[19]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[1]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[20]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[21]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[22]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[23]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[24]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[25]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[26]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[27]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[28]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[29]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[2]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[30]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[31]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[3]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[4]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[5]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[6]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[7]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[8]/Q (HIGH)
-
- There are 3 register/latch pins with no clock driven by root clock pin: c_input_reg[9]/Q (HIGH)
-
 
 2. checking constant_clock
 --------------------------
@@ -133,14 +67,14 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 264 pins that are not constrained for maximum delay. (HIGH)
+ There are 261 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
 5. checking no_input_delay
 --------------------------
- There are 7 input ports with no input delay specified. (HIGH)
+ There are 6 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 

@@ -10,11 +10,11 @@ This lab is about turning off and on the individual red LED segments of the disp
 
 #### Verilog Code
 
-#### ![1549226191683](1549226191683.png)
+#### ![1549226191683](assets\1549226191683.png)
 
 #### RTL Schematic
 
-![1549226084829](1549226084829.png)
+![1549226084829](assets\1549226084829.png)
 
 #### Synthesis Schematic
 
@@ -78,13 +78,13 @@ wire [11:0] 7'Hx 		 	 xxxxxxx
 
 Your goal is to develop a circuit with four BCD bits coming in and 7 bits leaving to support a 7 segment display.
 
-![1549030304451](1549030304451.png)
+![1549030304451](assets\1549030304451.png)
 
 CA, CB, CC, CD, CE, CF, CG and DP (decimal place), are all wired in parallel to each of the 8 displays. There are only 8 wires going from any circuit to all 8 displays. The AN (anodes) turn the 8 displays off and on. there is one AN wire going to each of the 8 displays. AN wires are active low, meaning a 0 turns them on and a 1 turns them off. 
 
 #### Port Interface
 
-![BCDto7segDisplay](BCDto7segDisplay.svg)
+![BCDto7segDisplay](assets\BCDto7segDisplay.svg)
 
 #### Verilog Code
 
@@ -92,7 +92,7 @@ This circuit has nothing to do with choosing which of the 8 segments are being u
 
 The obvious solution in verilog doesn't use constants:
 
-![1549306426198](1549306426198.png)
+![1549306426198](assets\1549306426198.png)
 
 There is some logic behind this code. Look at the equation for seg(6) or g. Only three numbers turn off  segment g: **0, 1 or 7**,  **0001 or 0111**, (**~x[3] & ~x[2] & ~x[1]** ) |(**x[2] & x[1] & x[0]** ). 
 
@@ -100,7 +100,7 @@ Is this obvious to a electrical or computer engineer working in the field?  **Ye
 
 #### RTL Schematic
 
-![1549306371095](1549306371095.png)
+![1549306371095](assets\1549306371095.png)
 
 #### Synthesis Schematic
 
@@ -146,21 +146,21 @@ Is this obvious to a electrical or computer engineer working in the field?  **Ye
 
 #### Verilog Code
 
-![1549295889139](1549295889139.png)
+![1549295889139](assets\1549295889139.png)
 
 #### RTL Schematic
 
-![1549296183721](1549296183721.png)
+![1549296183721](assets\1549296183721.png)
 
 #### Synthesis Schematic
 
-![1549296365537](1549296365537.png)
+![1549296365537](assets\1549296365537.png)
 
 #### Implementation Design Screen shot of something interesting
 
-![1549296499276](1549296499276.png)
+![1549296499276](assets\1549296499276.png)
 
-![1549296638682](1549296638682.png)
+![1549296638682](assets\1549296638682.png)
 
 #### Testing
 
@@ -168,7 +168,7 @@ Is this obvious to a electrical or computer engineer working in the field?  **Ye
 
 *A BEL is a [Basic Element of Logic](https://www.rapidwright.io/docs/Xilinx_Architecture.html).  Start reading the link. What is a routing BEL most similar to?*  
 
-![1549369911764](1549369911764.png)
+![1549369911764](assets\1549369911764.png)
 
 *What are PIPs?*
 
@@ -186,13 +186,13 @@ Is this obvious to a electrical or computer engineer working in the field?  **Ye
 
 This project was solved by a Xilinx instructor with the following four modules:
 
-![1549297133584](1549297133584.png)
+![1549297133584](assets\1549297133584.png)
 
-![1549297195247](1549297247694.png)
+![1549297195247](assets\1549297247694.png)
 
-![1549297195247](1549297195247.png)
+![1549297195247](assets\1549297195247.png)
 
-![1549297451207](1549297451207.png)
+![1549297451207](assets\1549297451207.png)
 
 *Why would someone write code like this, when the simple verilog code actually used in this project  is possible?*
 
@@ -208,11 +208,11 @@ This project was solved by a Xilinx instructor with the following four modules:
 
 The goal is to display BCD with an LED representing 1, the switches representing the original Hex, the LED representing 1 and the rest of the BCD number appearing on the 7 segment display.
 
-#### Port Interface![hex2sevenSegDisplay](hex2sevenSegDisplay.svg)
+#### Port Interface![hex2sevenSegDisplay](assets\hex2sevenSegDisplay.svg)
 
-#### Verilog Code![1549309140924](1549309140924.png)
+#### Verilog Code![1549309140924](assets\1549309140924.png)
 
-#### RTL Schematic![1549309176377](1549309176377.png)
+#### RTL Schematic![1549309176377](assets\1549309176377.png)
 
 #### Synthesis Schematic
 
@@ -241,7 +241,7 @@ The maximum number on eight, 7segment displays is 99,999,999. This is  28 bits  
 
  At what point does Vivado switch over from implementing with LUTs and Muxes into [Fast Carry Logic](https://www.xilinx.com/support/documentation/application_notes/xapp522-mux-design-techniques.pdf) .. the control logic below?   COUT stands for carry out. We can not implement the circuit below because we haven't covered clocks yet. 
 
-![1549368323140](1549368323140.png)
+![1549368323140](assets\1549368323140.png)
 
 Vivado is going to translate any math into truth tables.  A 6 input LUT can hold a 64 line truth table.  That leaves 22 bits requiring an additional 4,194,304 (4Meg) 6 input LUT's  and an identical number of 2 input, 1 select line muxes. 
 
@@ -253,7 +253,7 @@ Build 3 bit adder. Two groups of 3 switches, added together fit in four bits and
 
 #### RTL Schematic
 
-![1549455250299](1549455250299.png)
+![1549455250299](assets\1549455250299.png)
 
 #### Synthesis Schematic
 

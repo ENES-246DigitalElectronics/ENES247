@@ -88,6 +88,7 @@ module Eight7SegDisplay(
     //now find 3 bit pointer to the first one among the 8 displays using priority encoder logic
     integer L;
     always_comb begin
+        abc=0;
         for (L=0; L<8; L = L+1) if (priority_encoder_truthTable[L]==1) abc=L;
     end           
 endmodule

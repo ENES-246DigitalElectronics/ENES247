@@ -393,12 +393,6 @@ This lab is working perfectly. Fixed the 7segDisplay glowing instead of fully tu
 
 #### Test
 
-SW[2:0] display the decimal place correctly
-SW[15] pauses the counting
-SW[14] resets the counter to 0, again nothing to do with the 7seg display
-SW[13] hexBCD switches between display of binary in HEX and binary in BCD
-SW[12] bankSwitch is associated with the counter and is not working
-
 #### ToDo List
 
 Lots of the behavior of the counter present in 7_32bitsHexBCDdata_path was not replicated in this project. The example counter top level module needs to have the features added back in of pause, bankSwitch, reset, etc. 
