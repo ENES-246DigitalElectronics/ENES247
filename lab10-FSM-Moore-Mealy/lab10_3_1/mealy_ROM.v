@@ -26,14 +26,13 @@
 module mealy_ROM(
     input clk,
     input reset,
-    output [2:0] count
+    output [2:0] count,
+    output reg [2:0] state
     );
 
-    reg [2:0] state;
     wire [5:0] ROM_data;
     wire [2:0] nextstate;
-
-    
+        
     always @(posedge clk or posedge reset)
    	if (reset) 
          state <= 0;

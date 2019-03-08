@@ -15,21 +15,18 @@ else
 always @(state or x)	// always block to compute output
 begin
    parity = 1'b0;
-   case(state)
-      S0: if(x)
-             parity = 1; 
-      S1: if(!x)
-             parity = 1; 
-   endcase 
+    case(state)
+        S0: if(x)  parity = 1; 
+        S1: if(!x) parity = 1; 
+    endcase 
 end
+
 always @(state or x)	// always block to compute nextstate
 begin
-   nextstate = S0;
-   case(state)
-      S0: if(x)
-             nextstate = S1; 
-      S1: if(!x)
-             nextstate = S1; 
-      endcase 
+    nextstate = S0;
+    case(state)
+        S0: if(x)  nextstate = S1; 
+        S1: if(!x) nextstate = S1; 
+    endcase 
 end
 endmodule

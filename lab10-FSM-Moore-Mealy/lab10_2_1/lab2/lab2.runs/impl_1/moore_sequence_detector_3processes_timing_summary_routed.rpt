@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Fri Mar  8 13:55:47 2019
-| Host         : SET253-18C running 64-bit major release  (build 9200)
+| Date         : Fri Mar  8 14:49:21 2019
+| Host         : SET253-17C running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file moore_sequence_detector_3processes_timing_summary_routed.rpt -pb moore_sequence_detector_3processes_timing_summary_routed.pb -rpx moore_sequence_detector_3processes_timing_summary_routed.rpx -warn_on_violation
 | Design       : moore_sequence_detector_3processes
 | Device       : 7a100t-csg324
@@ -81,7 +81,7 @@ Table of Contents
 
 6. checking no_output_delay
 ---------------------------
- There is 1 port with no output delay specified. (HIGH)
+ There are 3 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 

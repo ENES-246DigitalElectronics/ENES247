@@ -7,10 +7,11 @@ module moore_sequence_detector_3processes(
     input clk,
     input reset,
     input [1:0] ain,
-    output reg yout
+    output reg yout,
+    output reg [1:0] state
     );
 
-    reg [1:0] state, nextstate;
+    reg [1:0] nextstate;
     parameter [1:0] S0=0, S1=1, S2=2, S3=3;
     
     always @(posedge clk or posedge reset)

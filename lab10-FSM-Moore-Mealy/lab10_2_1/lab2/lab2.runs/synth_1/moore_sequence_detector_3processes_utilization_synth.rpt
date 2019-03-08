@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Fri Mar  8 13:54:38 2019
-| Host         : SET253-18C running 64-bit major release  (build 9200)
+| Date         : Fri Mar  8 14:48:15 2019
+| Host         : SET253-17C running 64-bit major release  (build 9200)
 | Command      : report_utilization -file moore_sequence_detector_3processes_utilization_synth.rpt -pb moore_sequence_detector_3processes_utilization_synth.pb
 | Design       : moore_sequence_detector_3processes
 | Device       : 7a100tcsg324-1
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |    5 |     0 |       210 |  2.38 |
+| Bonded IOB                  |    7 |     0 |       210 |  3.33 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         6 |  0.00 |
 | PHASER_REF                  |    0 |     0 |         6 |  0.00 |
@@ -147,8 +147,8 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | IBUF     |    4 |                  IO |
+| OBUF     |    3 |                  IO |
 | FDCE     |    2 |        Flop & Latch |
-| OBUF     |    1 |                  IO |
 | LUT4     |    1 |                 LUT |
 | LUT3     |    1 |                 LUT |
 | BUFG     |    1 |               Clock |

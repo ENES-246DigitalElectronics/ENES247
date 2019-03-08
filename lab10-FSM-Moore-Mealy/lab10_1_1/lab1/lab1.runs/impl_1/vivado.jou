@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Fri Mar  8 13:51:58 2019
-# Process ID: 2460
+# Start of session at: Fri Mar  8 14:21:31 2019
+# Process ID: 5524
 # Current directory: C:/Users/SET253-17U.HCCMAIN/Documents/GitHub/ENES247/lab10-FSM-Moore-Mealy/lab10_1_1/lab1/lab1.runs/impl_1
 # Command line: vivado.exe -log mealy_sequence_detector_3processes.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source mealy_sequence_detector_3processes.tcl -notrace
 # Log file: C:/Users/SET253-17U.HCCMAIN/Documents/GitHub/ENES247/lab10-FSM-Moore-Mealy/lab10_1_1/lab1/lab1.runs/impl_1/mealy_sequence_detector_3processes.vdi

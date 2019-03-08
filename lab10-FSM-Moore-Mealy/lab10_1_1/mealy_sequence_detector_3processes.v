@@ -22,8 +22,7 @@ module mealy_sequence_detector_3processes(
     end
  	else 
  	begin
- 	    if(ain)
- 	      count <= count + 1;
+ 	    if(ain) count <= count + 1;
  	    state <= nextstate;
     end
  	
@@ -32,10 +31,8 @@ module mealy_sequence_detector_3processes(
         begin
             yout = 1'b0;
             case(state)
-                S0: if(!ain)
-                		yout = 1; 
-                S3: if(ain)
-                    	yout = 1;
+                S0: if(!ain) yout = 1; 
+                S3: if(ain)  yout = 1;
               endcase 
         end
     end

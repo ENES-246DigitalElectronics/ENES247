@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date         : Fri Mar  8 13:58:30 2019
+| Date         : Fri Mar  8 15:24:52 2019
 | Host         : SET253-17C running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file mealy_ROM_timing_summary_routed.rpt -pb mealy_ROM_timing_summary_routed.pb -rpx mealy_ROM_timing_summary_routed.rpx -warn_on_violation
 | Design       : mealy_ROM
@@ -81,7 +81,7 @@ Table of Contents
 
 6. checking no_output_delay
 ---------------------------
- There are 3 ports with no output delay specified. (HIGH)
+ There are 6 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 

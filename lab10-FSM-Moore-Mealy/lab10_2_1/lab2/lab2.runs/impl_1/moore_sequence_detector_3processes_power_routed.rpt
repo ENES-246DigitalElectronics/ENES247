@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Fri Mar  8 13:55:47 2019
-| Host             : SET253-18C running 64-bit major release  (build 9200)
+| Date             : Fri Mar  8 14:49:21 2019
+| Host             : SET253-17C running 64-bit major release  (build 9200)
 | Command          : report_power -file moore_sequence_detector_3processes_power_routed.rpt -pb moore_sequence_detector_3processes_power_summary_routed.pb -rpx moore_sequence_detector_3processes_power_routed.rpx
 | Design           : moore_sequence_detector_3processes
 | Device           : xc7a100tcsg324-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.876        |
+| Total On-Chip Power (W)  | 2.873        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.776        |
-| Device Static (W)        | 0.100        |
+| Dynamic (W)              | 2.764        |
+| Device Static (W)        | 0.109        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 81.0         |
-| Junction Temperature (C) | 29.0         |
+| Max Ambient (C)          | 71.9         |
+| Junction Temperature (C) | 38.1         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -57,10 +57,10 @@ Table of Contents
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   Register     |    <0.001 |        2 |    126800 |           <0.01 |
 |   Others       |     0.000 |        1 |       --- |             --- |
-| Signals        |     0.022 |        7 |       --- |             --- |
-| I/O            |     0.741 |        5 |       210 |            2.38 |
-| Static Power   |     0.100 |          |           |                 |
-| Total          |     0.876 |          |           |                 |
+| Signals        |     0.041 |        7 |       --- |             --- |
+| I/O            |     2.710 |        7 |       210 |            3.33 |
+| Static Power   |     0.109 |          |           |                 |
+| Total          |     2.873 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -70,9 +70,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.065 |       0.048 |      0.017 |
-| Vccaux    |       1.800 |     0.045 |       0.027 |      0.018 |
-| Vcco33    |       3.300 |     0.210 |       0.206 |      0.004 |
+| Vccint    |       1.000 |     0.091 |       0.066 |      0.025 |
+| Vccaux    |       1.800 |     0.118 |       0.099 |      0.019 |
+| Vcco33    |       3.300 |     0.768 |       0.764 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -137,7 +137,7 @@ Table of Contents
 +------------------------------------+-----------+
 | Name                               | Power (W) |
 +------------------------------------+-----------+
-| moore_sequence_detector_3processes |     0.776 |
+| moore_sequence_detector_3processes |     2.764 |
 +------------------------------------+-----------+
 
 
