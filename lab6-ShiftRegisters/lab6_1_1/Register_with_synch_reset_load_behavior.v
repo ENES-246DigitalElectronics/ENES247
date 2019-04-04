@@ -11,12 +11,6 @@ module Register_with_synch_reset_load_behavior(
     output reg [3:0] Q
     );
     
-   always @(posedge Clk)
-   if (reset) 
-   begin
-      Q <= 4'b0;
-   end else if (load)
-   begin
-     Q <= D;
-   end
+   always @(posedge Clk) if (load)  Q <= 4'b0; else if (reset) Q <= D;
+
 endmodule
